@@ -6,18 +6,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Smooth Scroll Header Logic
     window.addEventListener('scroll', () => {
-        // Threshold of 20px feels more responsive than 50px
         header.classList.toggle('scrolled', window.scrollY > 20);
     });
 
-    // 2. Menu Toggle Logic
-    const toggleMenu = () => sideMenu.classList.toggle('open');
+    // 2. Elite Menu Toggle Logic (With Scroll Lock)
+    const toggleMenu = () => {
+        // Toggle the class and check if it is now open
+        const isOpen = sideMenu.classList.toggle('open');
+        
+        // Lock or unlock background scrolling
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    };
 
     menuOpen.addEventListener('click', toggleMenu);
     menuClose.addEventListener('click', toggleMenu);
 
-    // Close menu if a link is clicked
+    // 3. Close menu and restore scrolling if a link is clicked
     document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => sideMenu.classList.remove('open'));
+        link.addEventListener('click', () => {
+            sideMenu.classList.remove('open');
+            document.body.style.overflow = ''; // CRITICAL: Unlock scroll when navigating
+        });
     });
 });

@@ -18,7 +18,7 @@ const products = [
         image: "../assets/images/products/nike-elite-tank-top-black.png",
         description: "Extra cushioning for maximum comfort on the court.",
         tag: "NEW ARRIVAL",   
-        isSoldOut: false
+        isSoldOut: true // This one is now sold out
     },
     
 
@@ -29,7 +29,7 @@ const products = [
         image:"../assets/images/products/nike-elite-tee-black.png.webp",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
         tag: "LIMITED EDITION",
-        isSoldOut: false
+        isSoldOut: true
 
 },
 
@@ -39,7 +39,7 @@ const products = [
         image:"../assets/images/products/nike-elite-tank-top-white.jpeg",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
         tag: "NEW ARRIVAL",
-        isSoldOut: false
+        isSoldOut: true
 
 },
 
@@ -49,7 +49,7 @@ const products = [
         image:"../assets/images/products/nike-elite-long-sleeve-white.png",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
         tag: "NEW ARRIVAL",
-        isSoldOut: false
+        isSoldOut: true
 
 },
 
@@ -59,7 +59,7 @@ const products = [
         image:"../assets/images/products/nike-elite-short-sleeve-black.png",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
         tag: "NEW ARRIVAL",
-        isSoldOut: false
+        isSoldOut: true
 },
 
 {
@@ -68,7 +68,7 @@ const products = [
         image:"../assets/images/products/nike-elite-long-sleeve-black.png",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
         tag: "NEW ARRIVAL",
-        isSoldOut: false
+        isSoldOut: true
 
 },
 
@@ -88,7 +88,7 @@ const products = [
         image:"../assets/images/products/nike-elite-socks-black.png",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
         tag: "NEW ARRIVAL",
-        isSoldOut: false
+        isSoldOut: true
 
 },
 
@@ -117,7 +117,7 @@ function loadProducts() {
         card.setAttribute("data-product-index", index);
         card.innerHTML = `
             <div class="product_image" style="background-image:url('${product.image}')">
-                ${product.isSoldOut ? '<span class="sold_out_label">OUT OF STOCK</span>' : ''}
+                ${product.isSoldOut ? '<span class="sold_out_label"></span>' : ''}
             </div>
             <div class="product_info">
                 <span class="product_name barlow-condensed-regular">${product.name}</span>

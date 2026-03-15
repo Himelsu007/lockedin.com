@@ -1,7 +1,7 @@
 const events = [
 {
 type: "KING OF THE COURT",
-title: "PRO SKILLS CLINIC",
+title: "HALF-COURT 4V4",
 date: "2026-02-10",
 time: "8:30PM - 10PM",
 location: "R. João da Silva 20, Lisboa",
