@@ -38,6 +38,8 @@ html,body {
     overflow-y: scroll; 
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth; 
+        -ms-overflow-style: none;
+scrollbar-width: none;
     background-color: black; /* Note: when the header turns black, it will match the body color */
 }
     
@@ -185,7 +187,7 @@ section#upcoming_runs_container {
 }
 
 article#upcoming_runs_container_child  { 
-    border:1px solid violet; height:144px; 
+    height:144px; 
     width:343px; display:flex; 
     align-items:center; justify-content:center;  
     flex-direction:column; gap:15px;
@@ -225,7 +227,7 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
         #nike_elite_gear_heading_container_child > h4 { color:#FFD700; font-size:17px; letter-spacing:3.2px; }
 
     #nike_elite_gear_heading_container_child > h2 { color:#FFFFFF; font-size:44px;}
-    #nike_elite_gear_heading_container_child > p { color:#A1A1AA; margin-top:10px;}
+    #nike_elite_gear_heading_container_child > p { color:#A1A1AA; margin-top:10px; text-align:center;}
 
     
 /* ============================= */
@@ -240,7 +242,7 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
     height: 340px;
     width: 343px;
     border: 1px solid #27272A;
-    border-radius: 16px;
+    border-radius: 16px; 
     margin: auto;
     margin-bottom: 30px;
     padding: 24px;
@@ -375,7 +377,7 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
 /* Text container */
 .event_details_small_container > :nth-child(2) {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: center;
 }
 
@@ -471,13 +473,13 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
     background-position: center;
     background-repeat: no-repeat;
     user-select: none;
-    -webkit-user-drag: none;
+    -webkit-user-drag: none; 
 }
 
 /* Label Styling - No more negative margins */
 .label_container {
     height: 28px;
-    width: 80%;
+    width: 80%; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -495,6 +497,7 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
 .item-socks  { background-image: url('../assets/images/home_page_elite_socks.png'); }
 .item-tank   { background-image: url('../assets/images/home_page_tank_top.png'); }
 .item-tshirt { background-image: url('../assets/images/home_page_drift_tshirt.png'); }
+.item-molten { background-image: url('https://tiebreakertimes.com.ph/wp-content/uploads/2023/09/2023-FIBA-WC-Final-Molten-ball.jpg'); }
 
 /* Buttons */
 .carousel_btn {

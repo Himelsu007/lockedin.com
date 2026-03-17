@@ -12,7 +12,7 @@
 
 .schedule_cards_container{
 
-    display:flex;
+    display:flex; border:1px solid white;
     flex-direction:row;
     gap:24px;
     overflow-x:auto;
@@ -25,8 +25,65 @@
 /* each card */
 .schedule_component_father{
 
-flex:0 0 340px;
+flex:0 0 423px;
 scroll-snap-align:start;
+height: 440px;
+    }
+
+
+    /* King of the Court Badge */
+.event_type_indicator > :nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 13px 40px;
+    background-color: rgba(239, 68, 68, 0.15);
+    border-radius: 99px;
+    border: 1px solid #EF4444;
+}
+
+.event_type_title h2 {
+    font-size: 1.70rem;
+    color: #ffffff; margin-top:20px;
+    line-height: 1.2;
+}
+
+.event_details_small_container > :nth-child(1) {
+    height: 55px; width:55px; 
+}
+
+
+.event_details_small_container > :nth-child(2) > p {
+font-size:15px;
+}
+
+.event_details_small_container > :nth-child(2) > a {
+font-size:15px;
+}
+
+.event_details_small_container > div > img {
+    height: 24px; width:24px;
+}
+
+.event_type_indicator > :nth-child(1) p {
+    color: #F87171;
+    letter-spacing: 0.6px;
+    font-size:14px;
+}
+
+.event_details_small_container > :nth-child(2) h4 {
+    letter-spacing: 0.6px;
+    font-size:16px;
+}
+
+.join_now_like_button {
+    height: 62px;
+    width: 172px;
+}
+
+.sold_out_like_button {
+    height: 64px;
+    width: 174px;
 
 }
 
@@ -42,13 +99,12 @@ scrollbar-width:none;
 
 
 .faq {
-    width: 850px; border:1px solid violet;
-    margin: auto; margin-top:30px; margin-bottom:40px;
+    width: 850px; 
 }
 
 .accordion-item {
     border-radius: 12px;
-    background: #0f1117;
+    background: #101012; box-shadow:inset 0 0 0 1px #27272A;
     overflow: hidden;
     margin-bottom: 20px;
     transition: border 0.3s ease; 
@@ -63,9 +119,9 @@ scrollbar-width:none;
 .accordion-header {
     background: transparent;
     width: 100%;
-    padding: 30px;
+    padding: 20px; padding-bottom:30px; padding-top:30px;
     border: none;
-    font-size: 18px;
+    font-size: 24px; 
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -93,7 +149,7 @@ scrollbar-width:none;
 }
 
 .accordion-content p {
-    font-size: 16px;
+    font-size: 20px;
     color: #9ca3af;
     line-height: 1.4;
 }
@@ -106,35 +162,59 @@ scrollbar-width:none;
 .got_questions_container > h3 { color:#FFD700; letter-spacing:4.2px; font-size:22px;}
 .got_questions_container > h2 { color:#FFFFFF;  font-size:46px; }
 
+.label_container > span { 
+    font-size:26px; 
+}
+
+.label_container { 
+height:70px; width:300px;
+}
+
+.legal_container  { 
+    border:1px solid white; max-width:1100px;
+}
+#legal_container_child > h3 {font-size:34px; }
+.legal_container_child > p { font-size:27px; }
+
+.legal_heading_container { 
+    height:40px; padding-left:13px; padding-right:13px;
+    width:365px; margin-top:90px;
+}
+
 
 .home_footer_container_01 { 
- 
-height:186px; width:850px;   border:1px solid white;
+
+height:255px; width:850px;   border:1px solid violet;
 margin:auto;  display:flex; 
 flex-direction:column; margin-bottom:20px;
 justify-content:space-between; 
 }
 
 .home_footer_container_01 > :nth-child(1) { 
-    height:36px; width:162px; border:1px solid white;
+    height:150px; width:162px; border:1px solid white;
     display:flex; 
     align-items:center; justify-content:center;
 }
 
-.home_footer_container_01 > :nth-child(2) { height:52px; width:550px; border:1px solid white; display:flex; align-items:center; justify-content:center;}
+.home_footer_container_01 > :nth-child(2) {
+    height:52px; width:550px; 
+    border:1px solid white; display:flex; 
+    align-items:center; justify-content:flex-start;
+}
 
 .home_footer_container_01 > :nth-child(3) { min-height:44px; width:324px;  display:flex; align-items:center; justify-content:space-between;}
 
 .footer_logo_container { border-radius:50%; background-color:#18181B; height:64px; width:64px; display:flex; align-items:center; justify-content:center;}
 
-.contact_us_container {   height:172px; width:850px; margin:auto; display:flex; flex-direction:column; justify-content:space-between; }
+.contact_us_container {   height:102px; width:850px; margin:auto; display:flex; flex-direction:column; justify-content:space-between; border:1px solid violet;}
 
-.contact_us_container > :nth-child(1) { height:36px; width:162px; border:1px solid white; }  
+.contact_us_container > :nth-child(1) { height:36px; width:162px; }  
 
-.contact_us_container > :nth-child(2) { height:112px; width:670px; flex-direction:row; border:1px solid white; display:flex; align-items:flex-start; justify-content:space-between;}  
+.contact_us_container > :nth-child(2) { height:32px; width:670px; flex-direction:row; border:1px solid white; display:flex; align-items:flex-start; justify-content:space-between;}  
 
 .contact_us_container > :nth-child(2) > a { color:#A1A1AA; font-size:20px; text-decoration:none;}
 .contact_us_container > :nth-child(2) > span { color:#A1A1AA; font-size:20px; text-decoration:none;}
+
 .all_rights_reserved_container { 
     border-top:1px solid #27272A; min-height:90px; width:50px; margin:auto; 
     margin-top:30px; margin-bottom:20px;  justify-content:space-between; gap:20px;
@@ -142,8 +222,8 @@ justify-content:space-between;
 }
 
 
-.all_rights_reserved_container > div:nth-child(1) { height:25px; width:390px; margin-top:20px; border:1px solid white;}
-.all_rights_reserved_container > div:nth-child(1) > p { color:#52525B; font-size:18px;;  }
+.all_rights_reserved_container > div:nth-child(1) { height:25px; width:420px; margin-top:20px; display:flex; align-items:center; justify-content:center;}
+.all_rights_reserved_container > div:nth-child(1) > p { color:#52525B; font-size:20px;  border:1px solid white; }
 
 .all_rights_reserved_container > div:nth-child(2) {
     height:20px; width:292px;  
@@ -162,30 +242,36 @@ justify-content:space-between;
 
 
 #nike_elite_gear_heading_container_child { text-align:center; display:flex; align-items:center; justify-content:space-between; 
-    flex-direction:column; height:200px; border:1px solid white; width:417px; margin-bottom:30px;
+    flex-direction:column; height:200px;  width:417px; margin-bottom:30px; width:500px;
 }
     #nike_elite_gear_heading_container_child > h3 { color:#FFD700; font-size:46px; letter-spacing:4.2px;}
-        #nike_elite_gear_heading_container_child > h4 { color:#FFD700; font-size:17px; letter-spacing:4.2px;}
+        #nike_elite_gear_heading_container_child > h4 { color:#FFD700; font-size:22px; letter-spacing:4.2px;}
 
-    #nike_elite_gear_heading_container_child > h2 { color:#FFFFFF; font-size:46px; letter-spacing:4.2px;}
-    #nike_elite_gear_heading_container_child > p { color:#A1A1AA; margin-top:10px; font-size:24px;}
+    #nike_elite_gear_heading_container_child > h2 { color:#FFFFFF; font-size:60px; letter-spacing:4.2px;}
+    #nike_elite_gear_heading_container_child > p { color:#A1A1AA; margin-top:10px; font-size:24px; text-align:start;}
 
 section#upcoming_runs_container { 
-    height:215px; width:537px; border:1px solid white;
+    min-height:215px; min-width:537px; border:1px solid white;
     display:flex; align-items:center; justify-content:center; 
     margin:auto;margin-bottom:30px; margin-top:30px;
 }
 
 article#upcoming_runs_container_child  { 
-    border:1px solid violet; height:180px; 
-    width:370px; display:flex;  
+    min-height:180px; 
+    min-width:500px; display:flex;  
     align-items:center; justify-content:center;  
     flex-direction:column; gap:15px;
 }
 
-article#upcoming_runs_container_child > h3 { color:#FFD700; letter-spacing:3.2px; font-size:27px;}
-article#upcoming_runs_container_child > h2 { color:#FFFFFF; letter-spacing:1.8px; font-size:50px; }
-article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:24px; line-height:27px; text-align:center; width:290px; }
+article#upcoming_runs_container_child > h3 { color:#FFD700; letter-spacing:3.2px; font-size:22px;}
+article#upcoming_runs_container_child > h2 { color:#FFFFFF; letter-spacing:1.8px; font-size:60px; }
+article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:24px; line-height:30px; text-align:center; width:290px; }
+
+.got_questions_container { 
+    height:150px; width:500px; }
+.got_questions_container > h3 { color:#FFD700; letter-spacing:4.2px; font-size:24px;}
+.got_questions_container > h2 { color:#FFFFFF;  font-size:60px; }
+
 
 header {
     display: flex;
@@ -212,7 +298,7 @@ header.scrolled {
 }
 
 #main-header > .logo-link > img {
-    height: 18px; /* Slightly larger logo */
+    height: 12px; /* Slightly larger logo */
     transition: height 0.3s ease;
 }
 
@@ -295,6 +381,17 @@ header.scrolled {
 
 #home_page_merch_button:hover lord-icon {
     transform: translateX(5px);
+}
+
+.home_page_product_boxes {
+    flex: 0 0 420px;
+    height:380px;
+  
+}
+
+.carousel_track {
+    gap: 30px;
+
 }
 
 

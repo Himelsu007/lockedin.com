@@ -3,7 +3,7 @@ const events = [
         type: "PICK UP GAME",
         title: "HALF-COURT 4V4",
         date: "2026-03-07",
-        time: "8:15PM - 9:45PM",
+        time: "8PM - 9:45PM",
         location: "AEIST ",
         map: "https://maps.app.goo.gl/s8LQtmuZsGKivsxo6",
         spotsTaken: 25,
@@ -11,26 +11,28 @@ const events = [
         price: "€5",
         priceLabel: "Entry Fee"
     },
+
     {
         type: "PICKUP GAME",
         title: "FULL COURT 5V5",
         date: "2026-02-10",
         time: "8:30PM - 10PM",
-        location: "Pavilhão das ...",
+        location: "Pavilhão...",
         map: "#",
-        spotsTaken: 4,
+        spotsTaken: 5,
         spotsTotal: 20,
         price: "€6",
         priceLabel: "Entry Fee"
     },
+
     {
         type: "PICKUP GAME",
         title: "FULL COURT 5V5",
         date: "2026-02-10",
         time: "8:30PM - 10PM",
-        location: "Pavilhão das ...",
+        location: "Pavilhão...",
         map: "#",
-        spotsTaken: 18,
+        spotsTaken: 16,
         spotsTotal: 20,
         price: "€6",
         priceLabel: "Entry Fee"
@@ -46,7 +48,7 @@ events.forEach(event => {
     const spotsLeft = event.spotsTotal - event.spotsTaken;
 
     let spotColor = "#3FFF6F";
-    let statusText = "Spots Available";
+    let statusText = "Open Spots";
     
     // STRATEGY: Use window.location.href inside the button's onclick
     // This passes the title of the event to the next page so you know which game they picked!
@@ -54,16 +56,16 @@ events.forEach(event => {
 
     if (spotsLeft <= 0) {
         spotColor = "#EF4444";
-        statusText = "Player Roster is Closed";
+        statusText = "Full";
         buttonHTML = `<button class="sold_out_like_button" disabled>SOLD OUT</button>`;
     } 
     else if (spotsLeft <= 3) {
         spotColor = "#EF4444";
-        statusText = "Only a few spots left";
+        statusText = "Almost Full";
     } 
     else if (spotsLeft <= 7) {
         spotColor = "#FFD700";
-        statusText = "Limited spots available";
+        statusText = "Almost Full";
     }
 
     const card = `
@@ -79,7 +81,7 @@ events.forEach(event => {
                     </div>
                 </div>
                 <div class="event_type_title">
-                    <h2 class="inter-black">${event.title}</h2>
+                    <h2 class="barlow-condensed-black">${event.title}</h2>
                 </div>
             </div>
 
