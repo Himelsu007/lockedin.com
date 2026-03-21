@@ -197,20 +197,9 @@ MAIN GRID
     display:flex;
     flex-wrap:wrap;
     justify-content:space-between;
-    gap:22px;
-    margin-bottom:40px;
+    gap:22px; margin-top:70px;
 }
 
-#products_show_case_container{
-
-    max-width:1100px;
-    margin:auto;
-    display:flex;
-    flex-wrap:wrap;
-    gap:22px;
-    justify-content:space-between;
-    margin-bottom:40px;
-}
 
 
 /* ===============================
@@ -229,7 +218,7 @@ FEATURED PRODUCT
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 9999;
+    z-index: 9999; 
 }
 
 #product_modal.active {
@@ -242,16 +231,34 @@ FEATURED PRODUCT
    ======================================== */
 .modal_content {
     background: #1c1c1e; /* Deep Apple-style dark gray */
-    width: 92%;
+    width: 95%; border:1px solid #3f3f46;
     max-width: 420px;
-    max-height: 98vh; /* Prevents it from going off-screen */
-    overflow-y: auto; /* Scrollable if screen is tiny */
-    border-radius: 12px;
+    max-height: 100vh; /* Prevents it from going off-screen */
+    overflow-y:auto; /* Scrollable if screen is tiny */
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
     transform: translateY(20px) scale(0.95);
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        animation: elitePulse 3s ease-in-out infinite;
+
+}
+
+@keyframes elitePulse {
+    0% {
+        border-color: rgba(125, 125, 125, 0.5);
+        box-shadow: 0 0 0px rgba(255, 255, 255, 0);
+    }
+    50% {
+        /* Glows brighter in the middle of the cycle */
+        border-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        border-color: rgba(125, 125, 125, 0.5);
+        box-shadow: 0 0 0px rgba(255, 255, 255, 0);
+    }
 }
 
 #product_modal.active .modal_content {
@@ -324,15 +331,6 @@ FEATURED PRODUCT
     margin: 0;
 }
 
-.modal_reviews {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: -8px; /* Pulls it closer to the title */
-}
-
-.stars { color: #FFD700; font-size: 0.9rem; }
-.review_count { color: #a1a1aa; font-size: 0.85rem; }
 
 .modal_price {
     color: #FFD700; /* Yellow to match screenshot */
@@ -395,8 +393,8 @@ FEATURED PRODUCT
     height:320px;
 
     background-image:url('../assets/images/socks_main_merch_container.jpg');
-    background-size:cover; background-position-y:970px;
-
+    background-size:cover; background-position-y:-321px;
+    background-repeat:no-repeat;
     border-radius:12px;
     border:1px solid #27272A;
     position:relative;
@@ -410,10 +408,8 @@ FEATURED PRODUCT
 #products_show_case_main_child_container::before{
 
     content:"";
-
     position:absolute;
     inset:0;
-
     background:linear-gradient(
         180deg,
         rgba(0,0,0,0.05),
@@ -436,7 +432,7 @@ FEATURED PRODUCT
     border: none;
     width: 100%;
     padding: 18px;
-    border-radius: 99px;
+    border-radius: 12px;
     font-size: 1.1rem;
     font-weight: 700;
     position: relative; /* Needed to anchor the SVG */
@@ -504,9 +500,7 @@ FEATURED PRODUCT
     );
 
     transform:skewX(-25deg);
-
     transition:all 1.1s ease;
-
     z-index:2;
 }
 
@@ -784,137 +778,3 @@ PRODUCT INFO
 
 
 
-
-/* ------------------------------------------------- ( Footer ) --------------------------------------------------------- */
-
-/* ========================================
-   LX FOOTER STYLES
-   ======================================== */
-.lx-footer {
-    background-color: #050505; /* Deep luxury black */
-    color: #ffffff;
-    padding: 60px 20px 20px 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator line */
-}
-
-/* The Main Grid Container */
-.lx-footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr; /* Mobile: 1 column */
-    gap: 48px;
-    padding-bottom: 48px;  }
-
-/* -- Column 1: Brand -- */
-.footer-logo {
-    width: 95px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.footer-tagline {
-    color: #A1A1AA; /* Zinc-400 */
-    font-size: 1.1rem;
-    line-height: 1.5;
-    max-width: 300px;
-    margin-bottom: 24px;
-}
-
-.footer-socials {
-    display: flex;
-    gap: 16px;
-}
-
-.social-icon-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 50%; /* Makes them cool circles */
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-icon-link img {
-    width: 20px;
-    height: auto;
-    transition: filter 0.3s ease;
-}
-
-.social-icon-link:hover {
-    background-color: #ffffff;
-    transform: translateY(-3px); /* Lifts up on hover */
-}
-
-.social-icon-link:hover img {
-    filter: invert(1); /* Flips icon color on hover */
-}
-
-/* -- Columns 2 & 3: Links -- */
-.footer-heading {
-    font-size: 1.5rem;
-    letter-spacing: 0.05em;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-.footer-link-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.text-muted {
-    color: #A1A1AA;
-}
-
-.footer-link-list a {
-    color: #A1A1AA;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 1rem;
-}
-
-.footer-link-list a:hover {
-    color: #ffffff; /* Lights up on hover */
-}
-
-/* -- Bottom Bar -- */
-.lx-footer-bottom {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 24px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-    color: #71717A; /* Zinc-500 */
-    font-size: 0.875rem;
-}
-
-/* ========================================
-   RESPONSIVE Footer (TABLET & DESKTOP)
-   ======================================== */
-@media (min-width: 768px) {
-    .lx-footer-content {
-        /* Tablet: 2 columns */
-        grid-template-columns: 1fr 1fr; 
-    }
-}
-
-@media (min-width: 1024px) {
-    .lx-footer-content {
-        /* Desktop: 3 columns. Brand takes up more space */
-        grid-template-columns: 2fr 1fr 1fr; 
-    }
-    
-    .lx-footer-bottom {
-        text-align: left; /* Aligns left on bigger screens */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}

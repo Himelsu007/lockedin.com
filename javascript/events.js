@@ -2,7 +2,7 @@ const events = [
     {
         type: "PICK UP GAME",
         title: "HALF-COURT 4V4",
-        date: "2026-03-07",
+        date: " March 28th",
         time: "8PM - 9:45PM",
         location: "AEIST ",
         map: "https://maps.app.goo.gl/s8LQtmuZsGKivsxo6",
@@ -87,7 +87,7 @@ events.forEach(event => {
 
             <div class="event_details_container">
                 <div class="event_details_small_container">
-                    <div><img src="assets/icons/clock.svg"></div>
+                    <div><i class="fa-solid fa-bell"></i></div>
                     <div>
                         <h4 class="inter-medium">${event.date}</h4>
                         <p class="inter-regular">${event.time}</p>

@@ -12,9 +12,9 @@
 
 .schedule_cards_container{
 
-    display:flex; border:1px solid white;
+    display:flex; 
     flex-direction:row;
-    gap:24px;
+    gap:24px; 
     overflow-x:auto;
     overflow-y:hidden;
     scroll-snap-type:x mandatory;
@@ -99,14 +99,14 @@ scrollbar-width:none;
 
 
 .faq {
-    width: 850px; 
+    max-width:1100px;
 }
 
 .accordion-item {
     border-radius: 12px;
     background: #101012; box-shadow:inset 0 0 0 1px #27272A;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
     transition: border 0.3s ease; 
     border: 2px solid transparent; 
 }
@@ -155,7 +155,7 @@ scrollbar-width:none;
 }
 
 .got_questions_container { 
-     height:150px; width:417px; margin:auto; margin-top:50px; border:1px solid white;
+     height:150px; width:417px; margin:auto; margin-top:50px; 
     display:flex; flex-direction:column; align-items:center; justify-content:center;
 }
 
@@ -238,10 +238,14 @@ justify-content:space-between;
     align-items:center;}  
 
 .all_rights_reserved_container > div:nth-child(3) > a { color:#A1A1AA; font-size:20px; text-decoration:none;}
+#nike_elite_gear_heading_container { 
+    height:270px; 
 
+}
 
-#nike_elite_gear_heading_container_child { text-align:center; display:flex; align-items:center; justify-content:space-between; 
-    flex-direction:column; height:200px;  width:417px; margin-bottom:30px; width:500px;
+#nike_elite_gear_heading_container_child { 
+    text-align:center; display:flex; align-items:center; justify-content:space-between; 
+    flex-direction:column; height:200px;  width:417px;  width:500px;  
 }
     #nike_elite_gear_heading_container_child > h3 { color:#FFD700; font-size:46px; letter-spacing:4.2px;}
         #nike_elite_gear_heading_container_child > h4 { color:#FFD700; font-size:22px; letter-spacing:4.2px;}
@@ -250,7 +254,7 @@ justify-content:space-between;
     #nike_elite_gear_heading_container_child > p { color:#A1A1AA; margin-top:10px; font-size:24px; text-align:start;}
 
 section#upcoming_runs_container { 
-    min-height:215px; min-width:537px; border:1px solid white;
+    min-height:215px; min-width:537px; 
     display:flex; align-items:center; justify-content:center; 
     margin:auto;margin-bottom:30px; margin-top:30px;
 }
@@ -315,9 +319,9 @@ header.scrolled {
 
 #home_page_merch_button {
     position: relative;
-    height: 74px;
+    height: 74px; 
     width: 280px;
-    margin: 20px auto;
+    margin: 50px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,6 +339,7 @@ header.scrolled {
         box-shadow 0.25s ease,
         background 0.3s ease;
 }
+.event_details_small_container :nth-child(1)> i { font-size:20px; color: #FFD700; width:auto;}
 
 
 /* ============================= */
@@ -446,10 +451,15 @@ header.scrolled {
 }
 
 .close_modal:hover { color: white; }
+#products_show_case_container { margin-top:100px;}
 
+.auth-container {
+        margin-top:200px;
+    }
 
-
-
+    .input-group label {
+        font-size:1.1rem;;
+     }
 
 /* ============================= */
 /* ICON MOTION                   */
@@ -473,7 +483,9 @@ header.scrolled {
     gap: 30px;
 
 }
-
+.carousel_btn {
+background-color:red;
+}
 
 /* ============================= */
 /* PREMIUM LIGHT SWEEP           */
@@ -513,15 +525,9 @@ header.scrolled {
         /* Change layout behavior */ 
     }
 
-    .schedule_component_father {
-        /* Make the card feel more premium/spacious */
+   /* Larger interaction targets */
     }
 
-    .sold_out_like_button, 
-    .join_now_like_button {
-        /* Larger interaction targets */
-    }
-}
 
 
 /* ==========================================================================
@@ -538,17 +544,18 @@ header.scrolled {
     flex-direction:row;
     gap:24px;
     overflow-x:auto;
-    overflow-y:hidden;
+    overflow-y:hidden; 
     scroll-snap-type:x mandatory;
     scroll-behavior:smooth;
     padding:10px 20px;
 }
+.event_details_small_container :nth-child(1)> i { font-size:21px; color: #FFD700; width:auto;}
 
 /* each card */
 .schedule_component_father{
 
-flex:0 0 423px;
-scroll-snap-align:start;
+flex:1 0 423px; 
+scroll-snap-align:start; 
 height: 440px;
     }
 
@@ -621,7 +628,7 @@ scrollbar-width:none;
 
 
 .faq {
-    width: 850px; 
+    max-width:1100px; 
 }
 
 .accordion-item {
@@ -641,7 +648,7 @@ scrollbar-width:none;
 .accordion-header {
     background: transparent;
     width: 100%;
-    padding: 20px; padding-bottom:30px; padding-top:30px;
+    padding: 20px; padding-bottom:27px; padding-top:27px;
     border: none;
     font-size: 24px; 
     color: #fff;
@@ -656,7 +663,7 @@ scrollbar-width:none;
 }
 
 .accordion-header span {
-   letter-spacing:0.8px;
+   letter-spacing:0.8px; font-size:20px;
 }
 
 .accordion-item.active .icon {
@@ -671,7 +678,7 @@ scrollbar-width:none;
 }
 
 .accordion-content p {
-    font-size: 20px;
+    font-size: 19px;
     color: #9ca3af;
     line-height: 1.4;
 }
@@ -920,10 +927,8 @@ header.scrolled {
     color:#FFD400;
     font-weight:600;
 }
-
-
 .modal_content {
-    max-width:900px; height:900px;
+    max-width:700px;
 }
 
 .modal_image_wrapper {

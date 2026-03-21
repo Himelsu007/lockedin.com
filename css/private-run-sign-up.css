@@ -6,17 +6,16 @@ html,body {
     overflow-y: scroll; 
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth; 
-        -ms-overflow-style: none;
-scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     background-color: black; /* Note: when the header turns black, it will match the body color */
 }
-    
 
 .auth-container {
     background: #1c1c1e;
     padding: 40px;
     border-radius: 12px;
-    max-width: 400px;
+    max-width: 800px;
     margin: 40px auto;
     border: 1px solid #333;  margin-top:100px;
 }
@@ -60,7 +59,7 @@ scrollbar-width: none;
 }
 
 #generate-pdf:not(.disabled) {
-    animation: pulseGlow 2s infinite;
+    animation: pulseGlow 2s infinite; color:#FFD700;
 }
 
 /* Guest Counter */

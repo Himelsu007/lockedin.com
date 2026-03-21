@@ -356,6 +356,8 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
     gap: 14px;
 }
 
+.event_details_small_container :nth-child(1)> i { font-size:16px; color: #FFD700; width:auto;}
+
 .event_details_small_container {
     width: calc(50% - 7px);
     display: flex;
@@ -364,7 +366,7 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
 }
 
 /* Icon container */
-.event_details_small_container > :nth-child(1) {
+.event_details_small_container > :nth-child(1)  {
     height: 36px;
     width: 36px;
     background-color: #27272A;
@@ -442,21 +444,65 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
 }
 
 /* ------------------------------------------------- ( Carousel ) --------------------------------------------------------- */
+/* ========================================
+   CAROUSEL VIEWPORT (NATIVE SCROLL)
+   ======================================== */
 .carousel_viewport {
-    overflow: hidden;
+    overflow-x: auto; /* Enables native trackpad/swipe scrolling */
+    overflow-y: hidden;
     width: 100%;
-    cursor: grab; /* Visual cue that it's swipeable */
+    cursor: grab;
+    
+    /* Hide the ugly default browser scrollbars */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    
+    /* The "Elite" magnetic snap */
+    scroll-snap-type: x mandatory; 
+    scroll-behavior: smooth;
 }
 
-.carousel_viewport:active { cursor: grabbing; }
+.carousel_viewport::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.carousel_viewport:active { 
+    cursor: grabbing; 
+}
 
 .carousel_track {
     display: flex;
     gap: 20px;
-    transition: transform 0.5s cubic-bezier(.25, .8, .25, 1);
-    will-change: transform; /* Performance optimization */
+    padding-bottom: 10px; /* Slight breathing room */
 }
 
+/* This targets your product boxes without touching their specific classes! */
+.carousel_track > * {
+    scroll-snap-align: start; /* Makes the box magnetize to the left edge */
+    flex-shrink: 0; /* Prevents the browser from squishing your boxes */
+}
+
+/* ========================================
+   THE PROGRESS BAR
+   ======================================== */
+.carousel_progress_bar {
+    width: 100%;
+    max-width: 300px; /* Keeps it looking sleek and intentional */
+    height: 3px;
+    background: rgba(255, 255, 255, 0.15); /* Faint track color */
+    margin: 10px auto 0; /* Centers it under the carousel */
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.carousel_progress_indicator {
+    height: 100%;
+    width: 0%; /* JS controls this */
+    background: #ffffff; /* Bright white indicator */
+    border-radius: 4px;
+    /* Optional: turns gold when fully scrolled */
+    transition: width 0.1s ease-out, background-color 0.3s ease; 
+}
 /* Shared Box Styles */
 .home_page_product_boxes {
     flex: 0 0 229px;
@@ -476,6 +522,22 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
     -webkit-user-drag: none; 
 }
 
+@keyframes elitePulse {
+    0% {
+        border-color: rgba(125, 125, 125, 0.5);
+        box-shadow: 0 0 0px rgba(255, 255, 255, 0);
+    }
+    50% {
+        /* Glows brighter in the middle of the cycle */
+        border-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        border-color: rgba(125, 125, 125, 0.5);
+        box-shadow: 0 0 0px rgba(255, 255, 255, 0);
+    }
+}
+
 /* Label Styling - No more negative margins */
 .label_container {
     height: 28px;
@@ -483,7 +545,7 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0,0,0,0.2); /* Slight overlay for readability */
+     /* Slight overlay for readability */
 }
 
 .barlow-condensed-black {
@@ -499,23 +561,6 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
 .item-tshirt { background-image: url('../assets/images/home_page_drift_tshirt.png'); }
 .item-molten { background-image: url('https://tiebreakertimes.com.ph/wp-content/uploads/2023/09/2023-FIBA-WC-Final-Molten-ball.jpg'); }
 
-/* Buttons */
-.carousel_btn {
-    position: absolute;
-    background:none;
-    border: none;
-    color: white;
-    font-size: 30px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10; 
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-button{ border:none;}
 
 
 /* HOME PAGE MERCH BUTTON        */
@@ -530,18 +575,16 @@ button{ border:none;}
     justify-content: center;
     align-items: center;
     gap: 12px;
-
+    animation: elitePulse 3s ease-in-out infinite;
+    transition: transform 0.3s ease, border-color 0.3s ease;
     background: linear-gradient(145deg, #1a1a1d, #111113);
     border-radius: 14px;
     border: 1px solid #2a2a2e;
-
     box-shadow:
         0 10px 25px rgba(0, 0, 0, 0.5),
         inset 0 0 0 1px rgba(255,255,255,0.04);
-
     cursor: pointer;
     overflow: hidden;
-
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
@@ -608,15 +651,15 @@ button{ border:none;}
 }
 
 .got_questions_container { 
-    height:100px; width:317px; margin:auto; margin-top:30px;
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    height:120px; width:317px; margin:auto; margin-top:50px; border:1px solid white;
+    display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
 }
 
 .got_questions_container > h3 { color:#FFD700; letter-spacing:4.2px;}
 .got_questions_container > h2 { color:#FFFFFF;  font-size:36px; }
 
 .faq {
-    width: 350px; 
+    max-width:1100pxpx;  padding:20px;
     margin: auto; margin-top:30px; margin-bottom:40px; 
 }
 
@@ -691,60 +734,3 @@ button{ border:none;}
     transform: translateY(0); 
     opacity: 1;
 }
-/* ------------------------------------------------- ( Footer ) --------------------------------------------------------- */
- 
-.home_footer_container_01 { 
- 
-height:255px; width:343px; 
-margin:auto;  display:flex;
-flex-direction:column; margin-bottom:20px;
-justify-content:space-between;
-}
-
-.home_footer_container_01 > :nth-child(1) { 
-    min-height:36px; width:140px; 
-    display:flex; 
-    align-items:center; justify-content:flex-start;
-}
-
-.home_footer_container_01 > :nth-child(2) { height:52px; width:300px; display:flex; align-items:center; justify-content:center;}
-
-.home_footer_container_01 > :nth-child(3) { 
-    min-height:44px; width:224px; margin-top:15px;
-    display:flex; align-items:flex-end; justify-content:space-between;}
-
-.footer_logo_container { border-radius:50%; background-color:#18181B; margin-bottom:15px; height:44px; width:44px; display:flex; align-items:center; justify-content:center;}
-
-.contact_us_container {   height:152px; width:343px; margin:auto; display:flex; flex-direction:column; justify-content:space-between; }
-
-.contact_us_container > :nth-child(1) { height:36px; width:162px; }  
-
-.contact_us_container > :nth-child(2) { height:112px; width:187px; flex-direction:column; display:flex; align-items:flex-start; justify-content:space-around;}  
-
-.contact_us_container > :nth-child(2) > a { color:#A1A1AA; font-size:14px; text-decoration:none;}
-
-.all_rights_reserved_container { 
-    border-top:1px solid #27272A; min-height:90px; width:343px; margin:auto; 
-    margin-top:30px; margin-bottom:20px;  justify-content:space-between; gap:20px;
-    display:flex; flex-direction:column; align-items:center;
-}
-
-
-.all_rights_reserved_container > div:nth-child(1) { height:20px; min-width:271px; margin-top:20px;}
-.all_rights_reserved_container > div:nth-child(1) > p { color:#52525B; font-size:14px;;  }
-
-.all_rights_reserved_container > div:nth-child(2) {
-    height:20px; width:192px;  
-    text-align:center; display:flex; justify-content:space-between;
-}  
-.all_rights_reserved_container > div:nth-child(2) > a { color:#A1A1AA; font-size:14px; text-decoration:none;}
-
-
-.all_rights_reserved_container > div:nth-child(3) { 
-    height:20px; 
-    width:300px; text-align:center; 
-    display:flex; justify-content:space-between;
-    align-items:center;}  
-
-.all_rights_reserved_container > div:nth-child(3) > a { color:#A1A1AA; font-size:14px; text-decoration:none;}
-
