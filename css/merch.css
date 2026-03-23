@@ -642,7 +642,7 @@ PRODUCT CARD
 .products_box{
 
     width:calc(50% - 11px);
-    height:260px;
+    height:280px;
     background:#0F0F12;
     border-radius:12px;
     border:1px solid #27272A;
@@ -666,7 +666,7 @@ PRODUCT IMAGE
 .product_image{
 
     flex:1;
-    background-size:cover;
+    background-size:cover; background-repeat:no-repeat;
     background-position:center;
     transition:.4s;
 }

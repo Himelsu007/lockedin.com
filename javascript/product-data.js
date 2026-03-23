@@ -4,8 +4,7 @@
 
 const products = [
 
-
-{
+    {
         name: "Nike Nba Elite Pro Socks - Black",
         price: "€24.99",
         image:"../assets/images/products/nike-elite-socks-black.png",
@@ -18,6 +17,25 @@ const products = [
         name: "Nike Nba Elite Pro Socks - White",
         price: "€24.99",
         image:"../assets/images/products/nike-elite-socks-white.png",
+        description: "Maximum comfort on the court.",
+        isSoldOut: false,
+        optionTitle: "<strong> Size <strong>",
+        options: ["38 - 41", "42 - 45", "46 - 49"]
+},
+
+{
+        name: "Molten Asian worldcup ",
+        price: "€24.99",
+        image:"../assets/images/products/molten_asia.png",
+        description: "No slipping nor distractions, just lockdown performance from the ground up.",
+        isSoldOut: false,
+        optionTitle: "<strong> Size <strong>",
+        options: ["38 - 41", "42 - 45", "46 - 49"]
+    },
+{
+        name: "Wilson NBA Authentic Series Indoor ",
+        price: "€24.99",
+        image:"../assets/images/products/wilson-official-ball.jpg",
         description: "Maximum comfort on the court.",
         isSoldOut: false,
         optionTitle: "<strong> Size <strong>",

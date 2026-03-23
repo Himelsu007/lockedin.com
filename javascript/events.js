@@ -1,4 +1,18 @@
 const events = [
+
+        {
+        type: "PICKUP GAME",
+        title: "FULL COURT 5V5",
+        date: "2026-02-10",
+        time: "8:30PM - 10PM",
+        location: "Casal Vistoso...",
+        map: "#",
+        spotsTaken: 0,
+        spotsTotal: 24,
+        price: "€6",
+        priceLabel: "Entry Fee"
+    },
+
     {
         type: "PICK UP GAME",
         title: "HALF-COURT 4V4",
@@ -14,29 +28,18 @@ const events = [
 
     {
         type: "PICKUP GAME",
-        title: "FULL COURT 5V5",
-        date: "2026-02-10",
+        title: "FULL COURT 4V4",
+        date: "2026-02-21",
         time: "8:30PM - 10PM",
         location: "Pavilhão...",
         map: "#",
-        spotsTaken: 5,
-        spotsTotal: 20,
-        price: "€6",
-        priceLabel: "Entry Fee"
-    },
-
-    {
-        type: "PICKUP GAME",
-        title: "FULL COURT 5V5",
-        date: "2026-02-10",
-        time: "8:30PM - 10PM",
-        location: "Pavilhão...",
-        map: "#",
-        spotsTaken: 16,
-        spotsTotal: 20,
-        price: "€6",
+        spotsTaken: 18,
+        spotsTotal: 18,
+        price: "€5",
         priceLabel: "Entry Fee"
     }
+
+
 ];
 
 const container = document.getElementById("events_container");
