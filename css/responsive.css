@@ -39,7 +39,7 @@ height: 440px;
     padding: 13px 40px;
     background-color: rgba(239, 68, 68, 0.15);
     border-radius: 99px;
-    border: 1px solid #EF4444;
+    
 }
 
 .event_type_title h2 {
@@ -173,75 +173,6 @@ scrollbar-width:none;
 #legal_container_child p { font-size:25px;}
 #legal_container_child h3 { font-size:28px;}
 
-
-.home_footer_container_01 { 
-
-height:255px; width:850px; 
-margin:auto;  display:flex; 
-flex-direction:column; margin-bottom:20px;
-justify-content:space-between; 
-}
-
-.home_footer_container_01 > :nth-child(1) { 
-    height:160px; width:162px; 
-    display:flex; 
-    align-items:center; justify-content:flex-start;
-}
-
-.home_footer_container_01 > :nth-child(2) {
-    height:65px; width:550px; 
-    display:flex; 
-    align-items:center; justify-content:flex-start;
-}
-
-.home_footer_container_01 > :nth-child(2) p{  font-size:22px;}
-
-
-.home_footer_container_01 > :nth-child(3) { min-height:44px; width:324px;  display:flex; align-items:center; justify-content:space-between;}
-
-.footer_logo_container { border-radius:50%; background-color:#18181B; height:64px; width:64px; display:flex; align-items:center; justify-content:center;}
-
-.contact_us_container {   height:80px; width:850px; margin:auto; display:flex; flex-direction:column; justify-content:space-between; }
-
-.contact_us_container > :nth-child(1) { height:36px; width:162px; }  
-
-.contact_us_container > :nth-child(2) { height:32px; width:670px; flex-direction:row;  display:flex; align-items:flex-start; justify-content:space-between;}  
-
-.contact_us_container > :nth-child(2) > a { color:#A1A1AA; font-size:22px; text-decoration:none;}
-.contact_us_container > :nth-child(2) > span { color:#A1A1AA; font-size:22px; text-decoration:none;}
-
-.all_rights_reserved_container { 
-    border-top:1px solid #27272A; min-height:90px; width:850px; margin:auto; 
-    margin-top:30px; margin-bottom:20px;  justify-content:space-between; gap:20px;
-    display:flex; flex-direction:column; align-items:center;
-}
-#products_show_case_main_child_container {
-    height:600px; background-position:center; background-size:cover; background-position-y:-450px; background-repeat:no-repeat;
-        background-image:url('../assets/images/socks_main_merch_container-2.jpg');
-
-}
-
-.all_rights_reserved_container > div:nth-child(1) { height:25px; width:420px; margin-top:20px; display:flex; align-items:center; justify-content:center;}
-.all_rights_reserved_container > div:nth-child(1) > p { color:#52525B; font-size:20px;  }
-
-.all_rights_reserved_container > div:nth-child(2) {
-    height:20px; width:390px;  
-    text-align:center; display:flex; justify-content:space-around;
-}  
-.all_rights_reserved_container > div:nth-child(2) > a { color:#A1A1AA; font-size:20px; text-decoration:none;}
-
-
-.all_rights_reserved_container > div:nth-child(3) { 
-    height:20px; 
-    width:390px; text-align:center; 
-    display:flex; justify-content:space-between;
-    align-items:center;}  
-
-.all_rights_reserved_container > div:nth-child(3) > a { color:#A1A1AA; font-size:20px; text-decoration:none;}
-#nike_elite_gear_heading_container { 
-    height:270px; 
-
-}
 
 #nike_elite_gear_heading_container_child { 
     text-align:center; display:flex; align-items:center; justify-content:space-between; 
@@ -474,8 +405,8 @@ header.scrolled {
 }
 
 .home_page_product_boxes {
-    flex: 0 0 420px;
-    height:380px;
+    flex: 0 0 350px;
+    height:300px;
   
 }
 
@@ -483,9 +414,8 @@ header.scrolled {
     gap: 30px;
 
 }
-.carousel_btn {
-background-color:red;
-}
+
+
 
 /* ============================= */
 /* PREMIUM LIGHT SWEEP           */
@@ -540,21 +470,21 @@ background-color:red;
 
 .schedule_cards_container{
 
-    display:flex; border:1px solid white;
+    display:flex;
     flex-direction:row;
     gap:24px;
     overflow-x:auto;
-    overflow-y:hidden; 
+    overflow-y:hidden;  margin:auto;
     scroll-snap-type:x mandatory;
     scroll-behavior:smooth;
-    padding:10px 20px;
+    padding:10px 20px; margin:auto; 
 }
 .event_details_small_container :nth-child(1)> i { font-size:21px; color: #FFD700; width:auto;}
 
 /* each card */
 .schedule_component_father{
 
-flex:1 0 423px; 
+flex:0 0 523px; 
 scroll-snap-align:start; 
 height: 440px;
     }
@@ -568,7 +498,6 @@ height: 440px;
     padding: 13px 40px;
     background-color: rgba(239, 68, 68, 0.15);
     border-radius: 99px;
-    border: 1px solid #EF4444;
 }
 
 .event_type_title h2 {
@@ -684,7 +613,7 @@ scrollbar-width:none;
 }
 
 .got_questions_container { 
-     height:150px; width:417px; margin:auto; margin-top:50px; border:1px solid white;
+     height:150px; width:417px; margin:auto; margin-top:50px;
     display:flex; flex-direction:column; align-items:center; justify-content:center;
 }
 
@@ -702,70 +631,12 @@ scrollbar-width:none;
 #legal_container_child p { font-size:25px;}
 #legal_container_child h3 { font-size:28px;}
 
-.home_footer_container_01 { 
-
-height:255px; width:850px;   
-margin:auto;  display:flex; 
-flex-direction:column; margin-bottom:20px;
-justify-content:space-between; 
-}
-
-.home_footer_container_01 > :nth-child(1) { 
-    height:160px; width:162px; 
-    display:flex; 
-    align-items:center; justify-content:flex-start;
-}
-
-.home_footer_container_01 > :nth-child(2) {
-    height:65px; width:550px; 
-    display:flex; 
-    align-items:center; justify-content:flex-start;
-}
-
-.home_footer_container_01 > :nth-child(2) p{  font-size:22px;}
-
-
-.home_footer_container_01 > :nth-child(3) { min-height:44px; width:324px;  display:flex; align-items:center; justify-content:space-between;}
-
-.footer_logo_container { border-radius:50%; background-color:#18181B; height:64px; width:64px; display:flex; align-items:center; justify-content:center;}
-
-.contact_us_container {   height:80px; width:850px; margin:auto; display:flex; flex-direction:column; justify-content:space-between; }
-
-.contact_us_container > :nth-child(1) { height:36px; width:162px; }  
-
-.contact_us_container > :nth-child(2) { height:32px; width:670px; flex-direction:row;  display:flex; align-items:flex-start; justify-content:space-between;}  
-
-.contact_us_container > :nth-child(2) > a { color:#A1A1AA; font-size:22px; text-decoration:none;}
-.contact_us_container > :nth-child(2) > span { color:#A1A1AA; font-size:22px; text-decoration:none;}
-
-.all_rights_reserved_container { 
-    border-top:1px solid #27272A; min-height:90px; width:850px; margin:auto; 
-    margin-top:30px; margin-bottom:20px;  justify-content:space-between; gap:20px;
-    display:flex; flex-direction:column; align-items:center;
-}
 #products_show_case_main_child_container {
     height:500px; background-position:center; background-size:cover; background-position-y:-740px; background-repeat:no-repeat;
         background-image:url('../assets/images/socks_main_merch_container-2.jpg');
 
 }
 
-.all_rights_reserved_container > div:nth-child(1) { height:25px; width:420px; margin-top:20px; display:flex; align-items:center; justify-content:center;}
-.all_rights_reserved_container > div:nth-child(1) > p { color:#52525B; font-size:20px;  }
-
-.all_rights_reserved_container > div:nth-child(2) {
-    height:20px; width:390px;  
-    text-align:center; display:flex; justify-content:space-around;
-}  
-.all_rights_reserved_container > div:nth-child(2) > a { color:#A1A1AA; font-size:20px; text-decoration:none;}
-
-
-.all_rights_reserved_container > div:nth-child(3) { 
-    height:20px; 
-    width:390px; text-align:center; 
-    display:flex; justify-content:space-between;
-    align-items:center;}  
-
-.all_rights_reserved_container > div:nth-child(3) > a { color:#A1A1AA; font-size:20px; text-decoration:none;}
 
 
 #nike_elite_gear_heading_container_child { text-align:center; display:flex; align-items:center; justify-content:space-between; 
@@ -778,7 +649,7 @@ justify-content:space-between;
     #nike_elite_gear_heading_container_child > p { color:#A1A1AA; margin-top:10px; font-size:24px; text-align:start;}
 
 section#upcoming_runs_container { 
-    min-height:215px; min-width:537px; border:1px solid white;
+    min-height:215px; min-width:537px; 
     display:flex; align-items:center; justify-content:center; 
     margin:auto;margin-bottom:30px; margin-top:30px;
 }
@@ -815,7 +686,8 @@ header {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother curve */
 }
 
-#products_show_case_container { margin-top:120px;}
+#products_show_case_container { margin-top:120px;
+}
 
 /* The Glass Effect on Scroll */
 header.scrolled {
@@ -901,7 +773,7 @@ header.scrolled {
 
 }
 .products_box{
-    width:calc(50% - 198px);
+    width:calc(50% - 398px);
     height:400px;
 
 }
@@ -994,12 +866,15 @@ display:none;
 #home_page_merch_button:hover lord-icon {
     transform: translateX(5px);
 }
-
 .home_page_product_boxes {
-    flex: 0 0 420px;
-    height:380px;
+    flex: 0 0 350px;
+    height:300px;
+        animation: elitePulse 3s ease-in-out infinite;
+
   
 }
+
+.home_page
 
 .carousel_track {
     gap: 30px;
@@ -1030,8 +905,22 @@ display:none;
 #home_page_merch_button:hover::before {
     left: 120%;
 }
+.home_page_product_father_container { margin:auto;  width:1500px;}    
 
-    
+.carousel_viewport::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.carousel_viewport:active { 
+    cursor: grabbing; 
+}
+
+.carousel_track {
+    display: flex;
+    gap: 20px; align-items:center; justify-content:center;
+    padding-bottom: 10px; /* Slight breathing room */
+}
+
 }
 
 

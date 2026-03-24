@@ -7,7 +7,7 @@ const events = [
         time: "8:30PM - 10PM",
         location: "Casal Vistoso...",
         map: "#",
-        spotsTaken: 0,
+        spotsTaken: 2,
         spotsTotal: 24,
         price: "€6",
         priceLabel: "Entry Fee"
@@ -38,7 +38,6 @@ const events = [
         price: "€5",
         priceLabel: "Entry Fee"
     }
-
 
 ];
 

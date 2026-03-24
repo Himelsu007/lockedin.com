@@ -191,7 +191,7 @@ MAIN GRID
 
 #products_show_case_container{
 
-    max-width:1100px;
+    max-width:1500px;
     min-width:364px;
     margin:auto;
     display:flex;
@@ -535,7 +535,52 @@ FEATURED PRODUCT
     font-family: 'Barlow Condensed', sans-serif;
     z-index: 10;
 }
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  /* Transparent Black with a "Glass" blur effect */
+  background: rgba(0, 0, 0, 0.7); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  padding: 12px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 10;
+}
 
+.marquee-track {
+  display: flex;
+  width: max-content; /* Vital for the seamless loop */
+  animation: scroll-seamless 20s linear infinite;
+}
+
+.marquee-track span {
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-right: 50px; /* Space between the repeated messages */
+    white-space: nowrap;
+}
+
+/* THE SEAMLESS LOOP LOGIC */
+@keyframes scroll-seamless {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* We move it exactly half of its total width because we duplicated the content */
+    transform: translateX(-50%);
+  }
+}
+
+/* Smooth Pause on Hover */
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+  cursor: pointer;
+}
 /* Grayscale effect for sold out items */
 .sold_out_img img {
     filter: grayscale(100%) brightness(0.6);

@@ -6,7 +6,7 @@ const products = [
 
     {
         name: "Nike Nba Elite Pro Socks - Black",
-        price: "€24.99",
+        price: "25€",
         image:"../assets/images/products/nike-elite-socks-black.png",
         description: "No slipping nor distractions, just lockdown performance from the ground up.",
         isSoldOut: false,
@@ -15,7 +15,7 @@ const products = [
     },
 {
         name: "Nike Nba Elite Pro Socks - White",
-        price: "€24.99",
+        price: "25€",
         image:"../assets/images/products/nike-elite-socks-white.png",
         description: "Maximum comfort on the court.",
         isSoldOut: false,
@@ -24,27 +24,28 @@ const products = [
 },
 
 {
-        name: "Molten Asian worldcup ",
-        price: "€24.99",
-        image:"../assets/images/products/molten_asia.png",
-        description: "No slipping nor distractions, just lockdown performance from the ground up.",
+        name: "Wilson Alliance Series Platinum ",
+        price: "59.99€",
+        tag: "FREE DELIVERY", // New Badge
+        image:"../assets/images/products/wilson-official-ball-silver.png",
+        description: "Let professional autographs shine with the Wilson Alliance Series Commemorative NBA Autograph Platinum Edition, featuring a full surface platinum autograph cover. ",
         isSoldOut: false,
         optionTitle: "<strong> Size <strong>",
-        options: ["38 - 41", "42 - 45", "46 - 49"]
+        options: ["7"]
     },
 {
         name: "Wilson NBA Authentic Series Indoor ",
-        price: "€24.99",
+        price: "59.99€",
         image:"../assets/images/products/wilson-official-ball.jpg",
         description: "Maximum comfort on the court.",
         isSoldOut: false,
         optionTitle: "<strong> Size <strong>",
-        options: ["38 - 41", "42 - 45", "46 - 49"]
+        options: ["7"]
 },
 
 {
         name: "Nike Nba Elite Pro Compression Shirt",
-        price: "€45",
+        price: "45€",
         image: "../assets/images/products/nike-elite-tee-white.png",
         description: "Lightweight, tight fit, and made for those who don't take days off, just like the pros in the NBA. ",
         tag: "LIMITED EDITION", // New Badge

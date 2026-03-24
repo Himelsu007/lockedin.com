@@ -307,7 +307,6 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
     padding: 10px 20px;
     background-color: rgba(239, 68, 68, 0.15);
     border-radius: 99px;
-    border: 1px solid #EF4444;
 }
 
 .event_type_indicator > :nth-child(1) p {
@@ -360,7 +359,7 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
 
 .event_details_small_container {
     width: calc(50% - 7px);
-    display: flex;
+    display: flex; 
     align-items: center;
     gap: 10px;
 }
@@ -450,8 +449,6 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
     overflow-y: hidden;
     width: 100%;
     cursor: grab;
-    
-    /* Hide the ugly default browser scrollbars */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
     
@@ -479,31 +476,10 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
     flex-shrink: 0; /* Prevents the browser from squishing your boxes */
 }
 
-/* ========================================
-   THE PROGRESS BAR
-   ======================================== */
-.carousel_progress_bar {
-    width: 100%;
-    max-width: 300px; /* Keeps it looking sleek and intentional */
-    height: 3px;
-    background: rgba(255, 255, 255, 0.15); /* Faint track color */
-    margin: 10px auto 0; /* Centers it under the carousel */
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.carousel_progress_indicator {
-    height: 100%;
-    width: 0%; /* JS controls this */
-    background: #ffffff; /* Bright white indicator */
-    border-radius: 4px;
-    /* Optional: turns gold when fully scrolled */
-    transition: width 0.1s ease-out, background-color 0.3s ease; 
-}
 /* Shared Box Styles */
 .home_page_product_boxes {
-    flex: 0 0 229px;
-    height: 187px;
+    flex: 0 0 220px;
+    height: 190px;
     border-radius: 8px;
     border: 1px solid #7d7d7d76;
     text-decoration: none; /* Remove link underline */
