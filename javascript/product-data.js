@@ -15,10 +15,10 @@ const products = [
     },
 {
         name: "Nike Nba Elite Pro Socks - White",
-        price: "25€",
+        price: "SOLD OUT",
         image:"../assets/images/products/nike-elite-socks-white.png",
         description: "Maximum comfort on the court.",
-        isSoldOut: false,
+        isSoldOut: true,
         optionTitle: "<strong> Size <strong>",
         options: ["38 - 41", "42 - 45", "46 - 49"]
 },
@@ -37,19 +37,19 @@ const products = [
         name: "Wilson NBA Authentic Series Indoor ",
         price: "59.99€",
         image:"../assets/images/products/wilson-official-ball.jpg",
-        description: "Maximum comfort on the court.",
+        description: "When high-performance meets high-demand, authentic NBA experiences can happen anytime, anyplace.",
         isSoldOut: false,
         optionTitle: "<strong> Size <strong>",
         options: ["7"]
 },
 
 {
-        name: "Nike Nba Elite Pro Compression Shirt",
-        price: "45€",
+        name: "Nike Nba Elite Pro Compression #SW",
+        price: "SOLD OUT",
         image: "../assets/images/products/nike-elite-tee-white.png",
         description: "Lightweight, tight fit, and made for those who don't take days off, just like the pros in the NBA. ",
         tag: "LIMITED EDITION", // New Badge
-        isSoldOut: false     ,   
+        isSoldOut: true     ,   
         optionTitle: "Size", 
         options: ["S", "M", "L"],
     },
@@ -65,7 +65,7 @@ const products = [
     },
 
 {
-        name: "Nike NBA Elite Pro Compression Shirt ",
+        name: "Nike NBA Elite Pro Compression #SB ",
         price:"SOLD OUT",
         image:"../assets/images/products/nike-elite-tee-black.png.webp",
         description: "Lightweight, tight fit, and made for those who don't take days off, just like the pros in the NBA. ",
@@ -85,7 +85,7 @@ const products = [
 },
 
 {
-        name:"Nike Nba Elite Pro Compression Long Sleeve - White  ",
+        name:"Nike Nba Elite Pro Compression #LSW  ",
         price: "COMING SOON",
         image:"../assets/images/products/nike-elite-long-sleeve-white.png",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
@@ -95,7 +95,7 @@ const products = [
 },
 
 {
-        name:"Nike Nba Elite Pro Compression Short Sleeve",
+        name:"Nike Nba Elite Pro Compression #SHB ",
         price: "COMING SOON",
         image:"../assets/images/products/nike-elite-short-sleeve-black.png",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
@@ -105,7 +105,7 @@ const products = [
 },
 
 {
-        name:"Nike Nba Elite Pro Compression long Sleeve  ",
+        name:"Nike Nba Elite Pro Compression #LHB ",
         price: "COMING SOON",
         image:"../assets/images/products/nike-elite-long-sleeve-black.png",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
@@ -116,7 +116,7 @@ const products = [
 },
 
 {
-        name:"Nike Nba Elite Pro Compression Short Sleeve",
+        name:"Nike Nba Elite Pro Compression #SHW ",
         price: "COMING SOON",
         image:"../assets/images/products/nike-elite-short-sleeve-white.jpeg",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
