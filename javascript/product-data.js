@@ -13,17 +13,7 @@ const products = [
         optionTitle: "<strong> Size <strong>",
         options: ["38 - 41", "42 - 45", "46 - 49"]
     },
-{
-        name: "Nike Nba Elite Pro Socks - White",
-        price: "SOLD OUT",
-        image:"../assets/images/products/nike-elite-socks-white.png",
-        description: "Maximum comfort on the court.",
-        isSoldOut: true,
-        optionTitle: "<strong> Size <strong>",
-        options: ["38 - 41", "42 - 45", "46 - 49"]
-},
-
-{
+    {
         name: "Wilson Alliance Series Platinum ",
         price: "59.99€",
         tag: "FREE DELIVERY", // New Badge
@@ -42,6 +32,16 @@ const products = [
         optionTitle: "<strong> Size <strong>",
         options: ["7"]
 },
+{
+        name: "Nike Nba Elite Pro Socks - White",
+        price: "SOLD OUT",
+        image:"../assets/images/products/nike-elite-socks-white.png",
+        description: "Maximum comfort on the court.",
+        isSoldOut: true,
+        optionTitle: "<strong> Size <strong>",
+        options: ["38 - 41", "42 - 45", "46 - 49"]
+},
+
 
 {
         name: "Nike Nba Elite Pro Compression #SW",

@@ -307,7 +307,7 @@ header.scrolled {
 
 }
 .products_box{
-    width:calc(50% - 187px);
+    width:calc(50% - 18px);
     height:450px;
 
 }
@@ -916,7 +916,5 @@ display:none;
    Usage: Only use if you want the cards to remain massive on 4K TVs.
    ========================================================================== */
 @media screen and (min-width: 2560px) {
-    body {
-        /* Sometimes useful to scale the root font-size here */
-    }
+
 }
