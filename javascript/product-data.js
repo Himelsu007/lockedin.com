@@ -16,9 +16,9 @@ const products = [
     {
         name: "Wilson Alliance Series Platinum ",
         price: "59.99€",
-        tag: "FREE DELIVERY", // New Badge
+        tag: "Exclusive", // New Badge
         image:"../assets/images/products/wilson-official-ball-silver.png",
-        description: "Let professional autographs shine with the Wilson Alliance Series Commemorative NBA Autograph Platinum Edition, featuring a full surface platinum autograph cover. ",
+        description: "Let professional autographs shine with the Wilson Alliance Series. ",
         isSoldOut: false,
         optionTitle: "<strong> Size <strong>",
         options: ["7"]
@@ -41,7 +41,6 @@ const products = [
         optionTitle: "<strong> Size <strong>",
         options: ["38 - 41", "42 - 45", "46 - 49"]
 },
-
 
 {
         name: "Nike Nba Elite Pro Compression #SW",
@@ -125,8 +124,6 @@ const products = [
         options: ["S", "M", "L"]
 
 },
-
-
 
 ];
 

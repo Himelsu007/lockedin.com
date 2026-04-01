@@ -7,7 +7,7 @@ const events = [
         time: "9:45AM - 12PM",
         location: "S.Sebastião",
         map: "https://maps.app.goo.gl/7GcVBr2GbTnQ3R8aA",
-        spotsTaken: 16,
+        spotsTaken: 14,
         spotsTotal: 20,
         price: "€6",
         priceLabel: "Entry Fee"
