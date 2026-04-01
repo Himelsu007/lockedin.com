@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     html2pdf().set(opt).from(container).save();
                     const waUrl = `https://wa.me/351911861637?text=${encodeURIComponent(message)}`;
                     window.open(waUrl, "_blank", "noopener,noreferrer");
-                    generateBtn.innerText = "PDF DOWNLOADED";
+                    generateBtn.innerText = "PDF DOWNLOADED, SEND IT TO STAFF";
                     alert("PDF downloaded! Sending you to WhatsApp now to attach it.");
                 }
 
