@@ -3,7 +3,7 @@ const events = [
         {
         type: "PICKUP GAME",
         title: "FULL COURT 5V5",
-        date: "28-03-2026",
+        date: "05-04-2026",
         time: "9:45AM - 12PM",
         location: "S.Sebastião",
         map: "https://maps.app.goo.gl/7GcVBr2GbTnQ3R8aA",
