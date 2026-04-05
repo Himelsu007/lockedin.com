@@ -7,8 +7,8 @@ const events = [
         time: "9:50AM - 12PM",
         location: "S.Sebastião",
         map: "https://maps.app.goo.gl/7GcVBr2GbTnQ3R8aA",
-        spotsTaken: 18,
-        spotsTotal: 20,
+        spotsTaken: 15,
+        spotsTotal: 15,
         price: "€6",
         priceLabel: "Entry Fee"
     },
@@ -20,8 +20,8 @@ const events = [
         time: "8PM - 9:45PM",
         location: "Técnico ",
         map: "https://maps.app.goo.gl/s8LQtmuZsGKivsxo6",
-        spotsTaken: 1,
-        spotsTotal: 24,
+        spotsTaken: 5,
+        spotsTotal: 20,
         price: "€5",
         priceLabel: "Entry Fee"
     }
