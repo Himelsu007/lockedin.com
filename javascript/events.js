@@ -20,13 +20,8 @@ const events = [
         time: "8PM - 9:45PM",
         location: "Técnico ",
         map: "https://maps.app.goo.gl/s8LQtmuZsGKivsxo6",
-<<<<<<< Updated upstream
-        spotsTaken: 5,
-        spotsTotal: 20,
-=======
         spotsTaken: 8,
         spotsTotal: 24,
->>>>>>> Stashed changes
         price: "€5",
         priceLabel: "Entry Fee"
     }
