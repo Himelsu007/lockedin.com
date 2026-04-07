@@ -3,11 +3,11 @@
 // ============================================
 
 const luxuryImages = [            
-    'assets/images/nba-elite-tank-top-bg-05.JPG', 
-    'assets/images/merch-animated-video-bg.gif',
-    'assets/images/IMG_0473.webp', 
-    'assets/images/molten-ball-bg-03.webp', 
-    'assets/images/IMG_0475.webp', 
+    '../assets/images/nba-elite-tank-top-bg-05.avif', 
+    '../assets/images/merch-animated-video-bg.gif',
+    '../assets/images/IMG_0921.avif', 
+    '../assets/images/IMG_0904.avif', 
+    '../assets/images/IMG_0916.avif', 
 ];
 
 
@@ -82,10 +82,10 @@ function startStatsAnimation() {
 }
 
 function startLocationSwapper() {
-    const locationElement = document.getElementById('location-text');
+    const locationElement = document.getElementById('events-text');
     if (!locationElement) return;
 
-    const locations = ["Pavilhão Municipal José Torres", "Técnico Campus Alameda", "Casal Vistoso Sports Complex", "Pavilhão Manuel CastelBranco"];
+    const locations = ["3v3 Tournaments", "King of the Court", "5v5 Tournaments", "Indoor Pick Up Games", "Training Camps"];
     let index = 0;
 
     setInterval(() => {

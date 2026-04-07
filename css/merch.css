@@ -275,17 +275,36 @@ FEATURED PRODUCT
 .modal_image_wrapper {
     position: relative;
     width: 100%;
-    height: 320px;
+    height: 330px;
     background: #000;
+    overflow: hidden; /* Keeps images from spilling out */
 }
 
+/* New Image Stack Logic */
 .modal_image_wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image fills the space beautifully */
+    object-fit: cover;
     border-radius: 12px 12px 0 0;
+    opacity: 0; /* Hide all images by default */
+    transition: opacity 0.8s ease-in-out; /* The smooth cross-fade */
+    z-index: 0;
 }
 
+/* The class we will toggle with JS */
+.modal_image_wrapper img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Ensure your buttons and badges stay on top of the images */
+.close_modal,
+.product_badge {
+    z-index: 10;
+}
 .close_modal {
     position: absolute;
     top: 16px;
@@ -487,7 +506,7 @@ FEATURED PRODUCT
 .slide-progress-bar {
     height: 100%;
     width: 0%;
-    background: #FFD700;
+    background: #85144B;
     transition: width 3s linear; /* Syncs with your 3s swap */
 }
 

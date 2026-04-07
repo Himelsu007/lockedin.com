@@ -5,9 +5,11 @@
 const products = [
 
     {
-        name: "Nba Elite Crew Socks - Black",
-        price: "25€",
-        image:"../assets/images/products/nike-elite-socks-black.png",
+        name: "Nba Elite Crew Socks #Black",
+        price: "25€ - Delivery in 24h",
+        tag: "Best Seller", 
+        image:"../assets/images/products/nba-elite-crew-socks/nike-elite-socks-black.png",
+        images: ["../assets/images/products/nba-elite-crew-socks/nike-elite-socks-black.png", "../assets/images/products/nba-elite-crew-socks/nba-elite-crew0001.jpg.avif", "../assets/images/products/nba-elite-crew-socks/nba-elite-crew0003.jpg.avif", , "../assets/images/ben-simons-bg.JPG"], // <-- Array of images
         description: "No slipping nor distractions, just lockdown performance from the ground up.",
         isSoldOut: false,
         optionTitle: "<strong> Size <strong>",
@@ -17,7 +19,8 @@ const products = [
         name: "Wilson Alliance Series Platinum ",
         price: "80€",
         tag: "Exclusive", // New Badge
-        image:"../assets/images/products/wilson-official-ball-silver.png",
+        image:"../assets/images/products/wilson-silver/wilson-official-ball-silver.png",
+        images: ["../assets/images/products/wilson-silver/wilson-silver0002.webp", "../assets/images/products/wilson-silver/wilson-silver0001.webp", "../assets/images/products/wilson-silver/wilson-silver0003.avif"],
         description: "Let professional autographs shine with the Wilson Alliance Series. ",
         isSoldOut: false,
         optionTitle: "<strong> Size <strong>",
@@ -25,17 +28,18 @@ const products = [
     },
 {
         name: "Wilson NBA Authentic Series Indoor ",
-        price: "59.99€",
-        image:"../assets/images/products/wilson-official-ball.jpg",
-        description: "When high-performance meets high-demand, authentic NBA experiences can happen anytime, anyplace.",
+        price: "50€",
+        image:"../assets/images/products/wilson-orange/wilson-official-ball.jpg",
+        images: ["../assets/images/products/wilson-orange/wilson-orange0002.avif", "../assets/images/products/wilson-orange/wilson-orange0001.avif", "../assets/images/products/wilson-orange/wilson-orange0003.avif"],
+        description: "NBA experiences can happen anytime, anyplace.",
         isSoldOut: false,
         optionTitle: "<strong> Size <strong>",
         options: ["7"]
 },
 {
-        name: "Nba Elite Crew Socks - White",
+        name: "Nba Elite Crew Socks #White",
         price: "SOLD OUT",
-        image:"../assets/images/products/nike-elite-socks-white.png",
+        image:"../assets/images/products/nba-elite-crew-socks/nike-elite-socks-white.png",
         description: "Maximum comfort on the court.",
         isSoldOut: true,
         optionTitle: "<strong> Size <strong>",
@@ -54,8 +58,8 @@ const products = [
     },
 
     {
-        name: "Nike Nba Elite Pro Tank Top - Black ",
-        price:"SOLD OUT",
+        name: "Nike Nba Elite Pro Tank Top #TB ",
+        price:"COMING SOON",
         image: "../assets/images/products/nike-elite-tank-top-black.png",
         description: "Designed for high-tempo runs where every possession matters.",
         isSoldOut: true, // This one is now sold out
@@ -74,7 +78,7 @@ const products = [
 },
 
 {
-        name: "Nike Nba Elite Pro Tank Top - White ",
+        name: "Nike Nba Elite Pro Tank Top #TW ",
         price:"SOLD OUT",
         image:"../assets/images/products/nike-elite-tank-top-white.jpeg",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
@@ -155,6 +159,9 @@ function loadProducts() {
 function initModal() {
     const modal = document.getElementById("product_modal");
     const container = document.getElementById("products_show_case_container");
+    
+    // We need a global variable to store our timer so we can kill it later
+    let slideshowInterval; 
 
     // ==========================================
     // 1. OPEN MODAL & BUILD HTML DYNAMICALLY
@@ -184,10 +191,19 @@ function initModal() {
             `;
         }
 
+        // --- NEW SLIDESHOW LOGIC ---
+        // Support the new 'images' array, but fallback to 'image' string if not updated yet
+        const imagesToLoad = product.images || [product.image];
+        
+        // Loop through images and add the 'active' class ONLY to the first one
+        const imagesHTML = imagesToLoad.map((imgUrl, i) => 
+            `<img src="${imgUrl}" alt="${product.name}" class="${i === 0 ? 'active' : ''}">`
+        ).join('');
+
         modal.innerHTML = `
             <div class="modal_content">
                 <div class="modal_image_wrapper ${isSoldOut ? 'sold_out_img' : ''}">
-                    <img src="${product.image}" alt="${product.name}">
+                    ${imagesHTML}
                     ${product.tag ? `<span class="product_badge">${product.tag}</span>` : ''}
                     <button class="close_modal">✕</button>
                 </div>
@@ -216,6 +232,25 @@ function initModal() {
 
         modal.classList.add("active");
         document.body.style.overflow = "hidden";
+
+        // --- START SLIDESHOW TIMER ---
+        clearInterval(slideshowInterval); // Clear any ghost timers just to be safe
+        
+        if (imagesToLoad.length > 1) {
+            let currentImgIndex = 0;
+            const imgElements = modal.querySelectorAll('.modal_image_wrapper img');
+            
+            slideshowInterval = setInterval(() => {
+                // Remove active from current
+                imgElements[currentImgIndex].classList.remove('active');
+                
+                // Move to next index, loop back to 0 if at the end
+                currentImgIndex = (currentImgIndex + 1) % imgElements.length;
+                
+                // Add active to new
+                imgElements[currentImgIndex].classList.add('active');
+            }, 2400); // 2.4s interval
+        }
     });
 
     // Handle Modal Interactions
@@ -224,6 +259,7 @@ function initModal() {
         if (e.target === modal || e.target.closest(".close_modal")) {
             modal.classList.remove("active");
             document.body.style.overflow = "";
+            clearInterval(slideshowInterval); // CRITICAL: Stop the slideshow when closed
         }
 
         // 2. Size Pill Selection
@@ -240,24 +276,21 @@ function initModal() {
         const waBtn = e.target.closest("#whatsapp_order_btn");
         if (waBtn) {
             if (waBtn.classList.contains("disabled")) {
-                // Button is disabled, shake it to tell the user they missed something
                 waBtn.classList.add("shake");
                 setTimeout(() => waBtn.classList.remove("shake"), 500);
                 return;
             }
 
-            // Grab the data
             const selectedSize = document.querySelector(".variant_pills .pill.active").innerText;
             const productName = document.querySelector(".modal_title").innerText;
             const productPrice = document.querySelector(".modal_price").innerText;
 
-            // Build the URL
-            const phoneNumber = "351911861637"; // <--- CHANGE THIS (e.g., 351912345678)
+            const phoneNumber = "351911861637"; 
             const textMessage = `Hello! I would like to order the ${productName} (${productPrice}) - Size: ${selectedSize}.`;
             const encodedMessage = encodeURIComponent(textMessage);
             
             const waUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-            window.open(waUrl, '_blank'); // Opens in a new tab/app
+            window.open(waUrl, '_blank'); 
         }
     });
 
@@ -266,6 +299,7 @@ function initModal() {
         if (e.key === "Escape" && modal.classList.contains("active")) {
             modal.classList.remove("active");
             document.body.style.overflow = "";
+            clearInterval(slideshowInterval); // CRITICAL: Stop the slideshow when closed
         }
     });
 }

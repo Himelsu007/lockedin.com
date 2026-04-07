@@ -371,7 +371,7 @@
     transition: all 0.4s ease-in-out;
 }
 
-#location-text {
+#events-text {
     transition: all 0.4s ease-in-out;
     display: inline-block; /* Required for transform to work well */
 }
