@@ -19,7 +19,7 @@ const products = [
         price: "25€",
         tag: "Best Seller", 
         image:"../assets/images/products/nba-elite-crew-socks/nike-elite-socks-black.png",
-        images: ["../assets/images/products/nba-elite-crew-socks/nike-elite-socks-black.png", "../assets/images/products/nba-elite-crew-socks/nba-elite-crew0001.jpg.avif", "../assets/images/products/nba-elite-crew-socks/nba-elite-crew0003.jpg.avif", , "../assets/images/ben-simons-bg.JPG"], // <-- Array of images
+        images: ["../assets/images/products/nba-elite-crew-socks/nike-elite-socks-black.png", "../assets/images/products/nba-elite-crew-socks/nba-elite-crew0001.jpg.avif", "../assets/images/products/nba-elite-crew-socks/nba-elite-crew0003.jpg.avif", , "../assets/images/ben-simons-bg.avif"], // <-- Array of images
         description: "No slipping nor distractions, just lockdown performance from the ground up.",
         isSoldOut: false,
         optionTitle: "<strong> Size <strong>",
@@ -47,7 +47,27 @@ const products = [
         options: ["7"]
 },
 {
-        name: "Nba Elite Crew Socks #White",
+        name: "Nba Nike Elite Shooting Sleeve",
+        price: "35€",
+        image:"../assets/images/products/nba-shooting-sleeve.avif",
+        images: ["../assets/images/white-shooting-sleeve-bg.avif", "../assets/images/products/nba-shooting-sleeve.avif"],
+        description: "Compression support for a consistent shot and full control.",
+        isSoldOut: false,
+        optionTitle: "<strong> Quantity <strong>",
+        options: ["1", "2", "3", "4"]
+},
+{
+        name: "Nba Nike Elite Shooting Sleeve",
+        price: "35€",
+        image:"../assets/images/products/shooting-sleeve-black.avif",
+        images: ["../assets/images/black-shooting-sleeve-bg.avif", "../assets/images/products/shooting-sleeve-black.avif"],
+        description: "Compression support for a consistent shot and full control.",
+        isSoldOut: false,
+        optionTitle: "<strong> Quantity <strong>",
+        options: ["1", "2", "3", "4"]
+},
+{
+        name: "Nba Elite Crew Socks #SW",
         price: "SOLD OUT",
         image:"../assets/images/products/nba-elite-crew-socks/nike-elite-socks-white.png",
         description: "Maximum comfort on the court.",
@@ -55,6 +75,8 @@ const products = [
         optionTitle: "<strong> Size <strong>",
         options: ["38 - 41", "42 - 45", "46 - 49"]
 },
+
+
 
 {
         name: "Nike Nba Elite Pro Compression #SW",
