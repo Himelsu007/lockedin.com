@@ -8,7 +8,7 @@ const events = [
         map: "https://maps.app.goo.gl/s8LQtmuZsGKivsxo6",
         spotsTaken: 5,
         spotsTotal: 20,
-        price: "€6",
+        price: "€5",
         priceLabel: "Entry Fee"
     },
 
@@ -20,7 +20,7 @@ const events = [
         location: "Técnico",
         map: "https://maps.app.goo.gl/s8LQtmuZsGKivsxo6",
         spotsTaken: 17,
-        spotsTotal: 20,
+        spotsTotal: 17,
         price: "€5",
         priceLabel: "Entry Fee"
     },
