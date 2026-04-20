@@ -197,7 +197,7 @@ MAIN GRID
     display:flex;
     flex-wrap:wrap;
     justify-content:space-between;
-    gap:22px; margin-top:70px;
+    gap:22px; margin-top:70px; cursor:pointer;
 }
 
 
@@ -216,7 +216,7 @@ FEATURED PRODUCT
     align-items: center;
     justify-content: center;
     opacity: 0;
-    pointer-events: none;
+    pointer-events: none; cursor:pointer;
     transition: opacity 0.3s ease;
     z-index: 9999; 
 }
