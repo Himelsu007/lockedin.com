@@ -2,13 +2,12 @@
 // CONFIG & STATE
 // ============================================
 
-const luxuryImages = [            
-    '../assets/images/nba-elite-tank-top-bg-05.avif', 
-    '../assets/images/IMG_0921.avif', 
-    '../assets/images/IMG_0916.avif', 
-    '../assets/images/IMG_0904.avif', 
-    '../assets/images/merch-animated-video-bg.gif',
-
+const luxuryImages = [
+    'assets/images/nba-elite-tank-top-bg-05.avif',
+    'assets/images/IMG_0921.avif',
+    'assets/images/IMG_0916.avif',
+    'assets/images/IMG_0904.avif',
+    'assets/images/merch-animated-video-bg.gif',
 ];
 
 

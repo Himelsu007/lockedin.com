@@ -6,8 +6,8 @@ const products = [
     {
         name: "Regular Elite Crew Socks #Black",
         price: "18€",
-        image:"../assets/images/products/nba-elite-crew-socks/regular-nike-elite-socks.webp",
-        images: ["../assets/images/products/nba-elite-crew-socks/regular-nike-elite-socks02.webp", "../assets/images/products/nba-elite-crew-socks/regular-nike-elite-socks03.webp", "../assets/images/products/nba-elite-crew-socks/regular-nike-elite-socks-04.webp"], // <-- Array of images
+        image:"assets/images/products/nba-elite-crew-socks/regular-nike-elite-socks.webp",
+        images: ["assets/images/products/nba-elite-crew-socks/regular-nike-elite-socks02.webp", "assets/images/products/nba-elite-crew-socks/regular-nike-elite-socks03.webp", "assets/images/products/nba-elite-crew-socks/regular-nike-elite-socks-04.webp"], // <-- Array of images
         description: "No slipping nor distractions, just lockdown performance from the ground up.",
         isSoldOut: false,
         optionTitle: "<strong> Size <strong>",
@@ -18,8 +18,8 @@ const products = [
         name: "Nba Elite Crew Socks #Black",
         price: "SOLD OUT",
         tag: "Best Seller", 
-        image:"../assets/images/products/nba-elite-crew-socks/nike-elite-socks-black.png",
-        images: ["../assets/images/products/nba-elite-crew-socks/nike-elite-socks-black.png", "../assets/images/products/nba-elite-crew-socks/nba-elite-crew0001.jpg.avif", "../assets/images/products/nba-elite-crew-socks/nba-elite-crew0003.jpg.avif", , "../assets/images/ben-simons-bg.avif"], // <-- Array of images
+        image:"assets/images/products/nba-elite-crew-socks/nike-elite-socks-black.png",
+        images: ["assets/images/products/nba-elite-crew-socks/nike-elite-socks-black.png", "assets/images/products/nba-elite-crew-socks/nba-elite-crew0001.jpg.avif", "assets/images/products/nba-elite-crew-socks/nba-elite-crew0003.jpg.avif", , "assets/images/ben-simons-bg.avif"], // <-- Array of images
         description: "No slipping nor distractions, just lockdown performance from the ground up.",
         isSoldOut: true,
         optionTitle: "<strong> Size <strong>",
@@ -29,8 +29,8 @@ const products = [
         name: "Wilson Alliance Series Platinum ",
         price: "80€",
         tag: "Exclusive", 
-        image:"../assets/images/products/wilson-silver/wilson-official-ball-silver.png",
-        images: ["../assets/images/products/wilson-silver/wilson-silver0002.webp", "../assets/images/products/wilson-silver/wilson-silver0001.webp", "../assets/images/products/wilson-silver/wilson-silver0003.avif"],
+        image:"assets/images/products/wilson-silver/wilson-official-ball-silver.png",
+        images: ["assets/images/products/wilson-silver/wilson-silver0002.webp", "assets/images/products/wilson-silver/wilson-silver0001.webp", "assets/images/products/wilson-silver/wilson-silver0003.avif"],
         description: "Let professional autographs shine with the Wilson Alliance Series. ",
         isSoldOut: false,
         optionTitle: "<strong> Size <strong>",
@@ -39,8 +39,8 @@ const products = [
 {
         name: "Wilson NBA Authentic Series Indoor ",
         price: "50€",
-        image:"../assets/images/products/wilson-orange/wilson-official-ball.jpg",
-        images: ["../assets/images/products/wilson-orange/wilson-orange0002.avif", "../assets/images/products/wilson-orange/wilson-orange0001.avif", "../assets/images/products/wilson-orange/wilson-orange0003.avif"],
+        image:"assets/images/products/wilson-orange/wilson-official-ball.jpg",
+        images: ["assets/images/products/wilson-orange/wilson-orange0002.avif", "assets/images/products/wilson-orange/wilson-orange0001.avif", "assets/images/products/wilson-orange/wilson-orange0003.avif"],
         description: "NBA experiences can happen anytime, anyplace.",
         isSoldOut: false,
         optionTitle: "<strong> Size <strong>",
@@ -49,8 +49,8 @@ const products = [
 {
         name: "Nba Nike Headband",
         price: "30€",
-        image:"../assets/images/products/nike-nba-dri-fit-fury-classic-headband-black.jpg",
-        images: ["../assets/images/products/nba-nike-headband-bg-02.avif", "../assets/images/products/nba-nike-headband-bg.avif", "../assets/images/products/nba-nike-headband-bg-03.avif", "../assets/images/products/nba-nike-headband-bg-04.webp"],
+        image:"assets/images/products/nike-nba-dri-fit-fury-classic-headband-black.jpg",
+        images: ["assets/images/products/nba-nike-headband-bg-02.avif", "assets/images/products/nba-nike-headband-bg.avif", "assets/images/products/nba-nike-headband-bg-03.avif", "assets/images/products/nba-nike-headband-bg-04.webp"],
         description: "Compression support for a consistent shot and full control.",
         isSoldOut: false,
         optionTitle: "<strong> Quantity <strong>",
@@ -59,8 +59,8 @@ const products = [
 {
         name: "Nba Nike Elite Shooting Sleeve",
         price: "35€",
-        image:"../assets/images/products/nba-shooting-sleeve.avif",
-        images: ["../assets/images/white-shooting-sleeve-bg.avif", "../assets/images/products/nba-shooting-sleeve.avif"],
+        image:"assets/images/products/nba-shooting-sleeve.avif",
+        images: ["assets/images/white-shooting-sleeve-bg.avif", "assets/images/products/nba-shooting-sleeve.avif"],
         description: "Compression support for a consistent shot and full control.",
         isSoldOut: false,
         optionTitle: "<strong> Quantity <strong>",
@@ -69,8 +69,8 @@ const products = [
 {
         name: "Nba Nike Elite Shooting Sleeve",
         price: "35€",
-        image:"../assets/images/products/shooting-sleeve-black.avif",
-        images: ["../assets/images/black-shooting-sleeve-bg.avif", "../assets/images/products/shooting-sleeve-black.avif"],
+        image:"assets/images/products/shooting-sleeve-black.avif",
+        images: ["assets/images/black-shooting-sleeve-bg.avif", "assets/images/products/shooting-sleeve-black.avif"],
         description: "Compression support for a consistent shot and full control.",
         isSoldOut: false,
         optionTitle: "<strong> Quantity <strong>",
@@ -79,7 +79,7 @@ const products = [
 {
         name: "Nba Elite Crew Socks #SW",
         price: "SOLD OUT",
-        image:"../assets/images/products/nba-elite-crew-socks/nike-elite-socks-white.png",
+        image:"assets/images/products/nba-elite-crew-socks/nike-elite-socks-white.png",
         description: "Maximum comfort on the court.",
         isSoldOut: true,
         optionTitle: "<strong> Size <strong>",
@@ -91,7 +91,7 @@ const products = [
 {
         name: "Nike Nba Elite Pro Compression #SW",
         price: "SOLD OUT",
-        image: "../assets/images/products/nike-elite-tee-white.png",
+        image: "assets/images/products/nike-elite-tee-white.png",
         description: "Lightweight, tight fit, and made for those who don't take days off, just like the pros in the NBA. ",
         tag: "LIMITED EDITION", // New Badge
         isSoldOut: true     ,   
@@ -102,7 +102,7 @@ const products = [
     {
         name: "Nike Nba Elite Pro Tank Top #TB ",
         price:"COMING SOON",
-        image: "../assets/images/products/nike-elite-tank-top-black.png",
+        image: "assets/images/products/nike-elite-tank-top-black.png",
         description: "Designed for high-tempo runs where every possession matters.",
         isSoldOut: true, // This one is now sold out
         optionTitle: "Size", 
@@ -112,7 +112,7 @@ const products = [
 {
         name: "Nike NBA Elite Pro Compression #SB ",
         price:"SOLD OUT",
-        image:"../assets/images/products/nike-elite-tee-black.png.webp",
+        image:"assets/images/products/nike-elite-tee-black.png.webp",
         description: "Lightweight, tight fit, and made for those who don't take days off, just like the pros in the NBA. ",
         isSoldOut: true,
         optionTitle: "Size", 
@@ -122,7 +122,7 @@ const products = [
 {
         name: "Nike Nba Elite Pro Tank Top #TW ",
         price:"SOLD OUT",
-        image:"../assets/images/products/nike-elite-tank-top-white.jpeg",
+        image:"assets/images/products/nike-elite-tank-top-white.jpeg",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
         isSoldOut: true,
         optionTitle: "Size", 
@@ -132,7 +132,7 @@ const products = [
 {
         name:"Nike Nba Elite Pro Compression #LSW  ",
         price: "COMING SOON",
-        image:"../assets/images/products/nike-elite-long-sleeve-white.png",
+        image:"assets/images/products/nike-elite-long-sleeve-white.png",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
         isSoldOut: true,
         optionTitle: "Size", 
@@ -142,7 +142,7 @@ const products = [
 {
         name:"Nike Nba Elite Pro Compression #SHB ",
         price: "COMING SOON",
-        image:"../assets/images/products/nike-elite-short-sleeve-black.png",
+        image:"assets/images/products/nike-elite-short-sleeve-black.png",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
         isSoldOut: true,
         optionTitle: "Size", 
@@ -152,7 +152,7 @@ const products = [
 {
         name:"Nike Nba Elite Pro Compression #LHB ",
         price: "COMING SOON",
-        image:"../assets/images/products/nike-elite-long-sleeve-black.png",
+        image:"assets/images/products/nike-elite-long-sleeve-black.png",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
         isSoldOut: true,
         optionTitle: "Size", 
@@ -163,7 +163,7 @@ const products = [
 {
         name:"Nike Nba Elite Pro Compression #SHW ",
         price: "COMING SOON",
-        image:"../assets/images/products/nike-elite-short-sleeve-white.jpeg",
+        image:"assets/images/products/nike-elite-short-sleeve-white.jpeg",
         description: "Extra cushioning in high-impact areas for maximum comfort on the court.",
         isSoldOut: true,
         optionTitle: "Size", 
