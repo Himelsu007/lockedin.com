@@ -24,67 +24,55 @@
 
 /* each card */
 .schedule_component_father{
+    flex: 0 0 400px;
+    scroll-snap-align: start;
+    height: auto;
+}
 
-flex:0 0 423px;
-scroll-snap-align:start;
-height: 440px;
-    }
 
-
-    /* King of the Court Badge */
+    /* Event type badge */
 .event_type_indicator > :nth-child(1) {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    padding: 13px 40px;
-    background-color: rgba(239, 68, 68, 0.15);
-    border-radius: 99px;
-    
+    padding: 10px 20px;
 }
 
 .event_type_title h2 {
     font-size: 1.70rem;
-    color: #ffffff; margin-top:20px;
+    color: #ffffff;
     line-height: 1.2;
 }
 
 .event_details_small_container > :nth-child(1) {
-    height: 55px; width:55px; 
+    height: 50px; width: 50px;
 }
 
-
 .event_details_small_container > :nth-child(2) > p {
-font-size:15px;
+    font-size: 14px;
 }
 
 .event_details_small_container > :nth-child(2) > a {
-font-size:15px;
+    font-size: 14px;
 }
 
 .event_details_small_container > div > img {
-    height: 24px; width:24px;
+    height: 22px; width: 22px;
 }
 
 .event_type_indicator > :nth-child(1) p {
-    color: #F87171;
     letter-spacing: 0.6px;
-    font-size:14px;
+    font-size: 13px;
 }
 
 .event_details_small_container > :nth-child(2) h4 {
     letter-spacing: 0.6px;
-    font-size:16px;
+    font-size: 15px;
 }
 
 .join_now_like_button {
-    height: 62px;
-    width: 172px;
+    height: 56px;
 }
 
 .sold_out_like_button {
-    height: 64px;
-    width: 174px;
-
+    height: 56px;
 }
 
 /* hide scrollbar */
@@ -154,13 +142,13 @@ scrollbar-width:none;
     line-height: 1.4;
 }
 
-.got_questions_container { 
-     height:150px; width:417px; margin:auto; margin-top:50px; 
+.got_questions_container {
+     height:150px; width:417px; margin:auto; margin-top:50px;
     display:flex; flex-direction:column; align-items:center; justify-content:center;
 }
 
-.got_questions_container > h3 { color:#FFD700; letter-spacing:4.2px; font-size:22px;}
-.got_questions_container > h2 { color:#FFFFFF;  font-size:46px; }
+.got_questions_container > h2 { color:#FFD700; letter-spacing:4.2px; font-size:22px;}
+.got_questions_container > h3 { color:#FFFFFF;  font-size:46px; }
 
 .label_container > span { 
     font-size:26px; 
@@ -178,10 +166,10 @@ scrollbar-width:none;
     text-align:center; display:flex; align-items:center; justify-content:space-between; 
     flex-direction:column; height:200px;  width:417px;  width:500px;  
 }
-    #nike_elite_gear_heading_container_child > h3 { color:#FFD700; font-size:46px; letter-spacing:4.2px;}
-        #nike_elite_gear_heading_container_child > h4 { color:#FFD700; font-size:22px; letter-spacing:4.2px;}
+    #nike_elite_gear_heading_container_child > h4 { color:#FFD700; font-size:46px; letter-spacing:4.2px;}
+        #nike_elite_gear_heading_container_child > h2 { color:#FFD700; font-size:22px; letter-spacing:4.2px;}
 
-    #nike_elite_gear_heading_container_child > h2 { color:#FFFFFF; font-size:60px; letter-spacing:4.2px;}
+    #nike_elite_gear_heading_container_child > h3 { color:#FFFFFF; font-size:60px; letter-spacing:4.2px;}
     #nike_elite_gear_heading_container_child > p { color:#A1A1AA; margin-top:10px; font-size:24px; text-align:start;}
 
 section#upcoming_runs_container { 
@@ -197,14 +185,14 @@ article#upcoming_runs_container_child  {
     flex-direction:column; gap:15px;
 }
 
-article#upcoming_runs_container_child > h3 { color:#FFD700; letter-spacing:3.2px; font-size:22px;}
-article#upcoming_runs_container_child > h2 { color:#FFFFFF; letter-spacing:1.8px; font-size:60px; }
+article#upcoming_runs_container_child > h2 { color:#FFD700; letter-spacing:3.2px; font-size:22px;}
+article#upcoming_runs_container_child > h3 { color:#FFFFFF; letter-spacing:1.8px; font-size:60px; }
 article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:24px; line-height:30px; text-align:center; width:290px; }
 
-.got_questions_container { 
+.got_questions_container {
     height:150px; width:500px; }
-.got_questions_container > h3 { color:#FFD700; letter-spacing:4.2px; font-size:24px;}
-.got_questions_container > h2 { color:#FFFFFF;  font-size:60px; }
+.got_questions_container > h2 { color:#FFD700; letter-spacing:4.2px; font-size:24px;}
+.got_questions_container > h3 { color:#FFFFFF;  font-size:60px; }
 
 
 header {
@@ -488,9 +476,9 @@ height: 440px;
     border-radius: 99px;
 }
 
-.event_type_title h2 {
+.event_type_title h3 {
     font-size: 1.70rem;
-    color: #ffffff; margin-top:20px;
+    color: #ffffff;
     line-height: 1.2;
 }
 
@@ -607,10 +595,10 @@ scrollbar-width:none;
     display:flex; flex-direction:column; align-items:center; justify-content:center;
 }
 
-.got_questions_container > h3 { color:#FFD700; letter-spacing:4.2px; font-size:22px;}
-.got_questions_container > h2 { color:#FFFFFF;  font-size:46px; }
+.got_questions_container > h2 { color:#FFD700; letter-spacing:4.2px; font-size:22px;}
+.got_questions_container > h3 { color:#FFFFFF;  font-size:46px; }
 
-.label_container > span { 
+.label_container > span {
     font-size:26px; 
 }
 
@@ -625,10 +613,10 @@ scrollbar-width:none;
 #nike_elite_gear_heading_container_child { text-align:center; display:flex; align-items:center; justify-content:space-between; 
     flex-direction:column; height:200px;  width:417px; margin-bottom:30px; width:500px;
 }
-    #nike_elite_gear_heading_container_child > h3 { color:#FFD700; font-size:46px; letter-spacing:4.2px;}
-        #nike_elite_gear_heading_container_child > h4 { color:#FFD700; font-size:22px; letter-spacing:4.2px;}
+    #nike_elite_gear_heading_container_child > h4 { color:#FFD700; font-size:46px; letter-spacing:4.2px;}
+        #nike_elite_gear_heading_container_child > h2 { color:#FFD700; font-size:22px; letter-spacing:4.2px;}
 
-    #nike_elite_gear_heading_container_child > h2 { color:#FFFFFF; font-size:60px; letter-spacing:4.2px;}
+    #nike_elite_gear_heading_container_child > h3 { color:#FFFFFF; font-size:60px; letter-spacing:4.2px;}
     #nike_elite_gear_heading_container_child > p { color:#A1A1AA; margin-top:10px; font-size:24px; text-align:start;}
 
 section#upcoming_runs_container { 
@@ -644,14 +632,14 @@ article#upcoming_runs_container_child  {
     flex-direction:column; gap:15px;
 }
 
-article#upcoming_runs_container_child > h3 { color:#FFD700; letter-spacing:3.2px; font-size:22px;}
-article#upcoming_runs_container_child > h2 { color:#FFFFFF; letter-spacing:1.8px; font-size:60px; }
+article#upcoming_runs_container_child > h2 { color:#FFD700; letter-spacing:3.2px; font-size:22px;}
+article#upcoming_runs_container_child > h3 { color:#FFFFFF; letter-spacing:1.8px; font-size:60px; }
 article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:24px; line-height:30px; text-align:center; width:290px; }
 
-.got_questions_container { 
+.got_questions_container {
     height:150px; width:500px; }
-.got_questions_container > h3 { color:#FFD700; letter-spacing:4.2px; font-size:24px;}
-.got_questions_container > h2 { color:#FFFFFF;  font-size:60px; }
+.got_questions_container > h2 { color:#FFD700; letter-spacing:4.2px; font-size:24px;}
+.got_questions_container > h3 { color:#FFFFFF;  font-size:60px; }
 
 
 header {

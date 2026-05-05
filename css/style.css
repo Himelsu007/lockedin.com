@@ -180,22 +180,30 @@ button {
 }
 
 
-section#upcoming_runs_container { 
+section#upcoming_runs_container {
     height:auto; width:343px;
-    display:flex; align-items:center; justify-content:center; 
+    display:flex; align-items:center; justify-content:center;
     margin:auto;margin-bottom:30px; margin-top:30px;
 }
 
-article#upcoming_runs_container_child  { 
-    height:144px; 
-    width:343px; display:flex; 
-    align-items:center; justify-content:center;  
-    flex-direction:column; gap:15px;
+article#upcoming_runs_container_child  {
+    height:auto;
+    width:343px; display:flex;
+    align-items:center; justify-content:center;
+    flex-direction:column; gap:12px;
 }
 
-article#upcoming_runs_container_child > h3 { color:#FFD700; letter-spacing:3.2px;}
-article#upcoming_runs_container_child > h2 { color:#FFFFFF; letter-spacing:1.8px; font-size:44px; }
+article#upcoming_runs_container_child > h2 { color:#FFD700; letter-spacing:3.2px; font-size:1.17em; }
+article#upcoming_runs_container_child > h3 { color:#FFFFFF; letter-spacing:1.8px; font-size:44px; }
 article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-height:24px; text-align:center; width:290px; }
+
+.upcoming_runs_accent {
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, #3FFF6F, #00c44f);
+    border-radius: 99px;
+    margin-top: 4px;
+}
 #nike_elite_gear_heading_container { 
     height:170px; 
     width:351px; margin:auto; display:flex; 
@@ -223,10 +231,10 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
 .legal_heading_container > h2 { color:#FFD700; font-size:17px; letter-spacing:3.2px; }
 
 #nike_elite_gear_heading_container_child { text-align:center; display:flex; align-items:center; justify-content:space-between; flex-direction:column; gap:px; }
-    #nike_elite_gear_heading_container_child > h3 { color:#FFD700; font-size:32px;}
-        #nike_elite_gear_heading_container_child > h4 { color:#FFD700; font-size:17px; letter-spacing:3.2px; }
+    #nike_elite_gear_heading_container_child > h4 { color:#FFD700; font-size:32px; }
+        #nike_elite_gear_heading_container_child > h2 { color:#FFD700; font-size:17px; letter-spacing:3.2px; }
 
-    #nike_elite_gear_heading_container_child > h2 { color:#FFFFFF; font-size:44px;}
+    #nike_elite_gear_heading_container_child > h3 { color:#FFFFFF; font-size:44px; }
     #nike_elite_gear_heading_container_child > p { color:#A1A1AA; margin-top:10px; text-align:center;}
 
     
@@ -239,26 +247,33 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
 
 .schedule_component_father {
     position: relative;
-    height: 340px;
+    height: auto;
     width: 343px;
     border: 1px solid #27272A;
-    border-radius: 16px; 
+    border-radius: 16px;
     margin: auto;
     margin-bottom: 30px;
-    padding: 24px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: #0f0f12;
+    background: linear-gradient(160deg, #141418 0%, #0f0f12 60%);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .schedule_component_father:hover {
     transform: translateY(-4px);
-    box-shadow: 0 0 0 1.4px #D6A700;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
+.card_inner {
+    padding: 20px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    flex: 1;
+}
 
 /* Glow Effect */
 .schedule_component_father::before {
@@ -268,14 +283,14 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
     border-radius: inherit;
     pointer-events: none;
     background: radial-gradient(
-        circle at center,
-        rgba(255, 221, 87, 0.08) 20%,
-        rgba(255, 221, 87, 0.06) 45%,
-        rgba(255, 221, 87, 0.03) 75%,
-        transparent 100%
+        ellipse at 50% 0%,
+        rgba(63, 255, 111, 0.05) 0%,
+        transparent 65%
     );
-    animation: pulseGlow 6s ease-in-out infinite;
+    z-index: 0;
 }
+
+.card_inner > * { position: relative; z-index: 1; }
 
 @keyframes pulseGlow {
     0%, 100% { opacity: 0.4; transform: scale(1); }
@@ -299,20 +314,19 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
     justify-content: space-between;
 }
 
-/* King of the Court Badge */
+/* Event type badge — color set inline via JS */
 .event_type_indicator > :nth-child(1) {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
-    background-color: rgba(239, 68, 68, 0.15);
+    padding: 7px 14px;
     border-radius: 99px;
+    border: 1px solid transparent;
 }
 
 .event_type_indicator > :nth-child(1) p {
-    color: #F87171;
-    letter-spacing: 0.6px;
-    font-size:8.1px;
+    letter-spacing: 0.8px;
+    font-size: 8.1px;
 }
 
 /* Live Indicator */
@@ -338,10 +352,11 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
 }
 
 /* Title */
-.event_type_title h2 {
-    font-size: 1.25rem;
-    color: #ffffff; margin-top:20px;
+.event_type_title h3 {
+    font-size: 1.35rem;
+    color: #ffffff;
     line-height: 1.2;
+    letter-spacing: 0.5px;
 }
 
 
@@ -402,22 +417,63 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
     font-weight: 700;
 }
 
+/* Spots progress bar */
+.spots_progress_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.spots_progress_label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spots_progress_label span {
+    font-size: 0.65rem;
+    color: #9CA3AF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.spots_progress_label strong {
+    font-size: 0.65rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.spots_progress_bar {
+    width: 100%;
+    height: 4px;
+    background-color: #27272A;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.spots_progress_fill {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 0.6s ease;
+}
+
 
 /* ============================= */
 /* BUTTON STATES                 */
 /* ============================= */
 
 .sold_out_like_button {
-    height: 52px;
-    width: 160px;
+    height: 50px;
+    width: 100%;
     background-color: #18181B;
-    border-radius: 99px;
-    border: 1px solid #27272A;
+    border-radius: 12px;
+    border: 1px solid #3f3f46;
     color: #EF4444;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
     cursor: not-allowed;
-    transition: background 0.3s ease, transform 0.2s ease;
+    font-size: 0.75rem;
+    transition: background 0.3s ease;
 }
 
 .sold_out_like_button:hover {
@@ -425,21 +481,24 @@ article#upcoming_runs_container_child > p { color:#A1A1AA; font-size:14px; line-
 }
 
 .join_now_like_button {
-    height: 52px;
-    width: 160px;
-    background-color: #85144B;
-    border-radius: 99px;
-    border: 1px solid #85144B;
-    color: #FFFFFf;
-    font-weight: 600;
-    letter-spacing: 1px;
+    height: 50px;
+    width: 100%;
+    background-color: #3FFF6F;
+    border-radius: 12px;
+    border: none;
+    color: #0a0a0a;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-size: 0.75rem;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    box-shadow: 0 0 16px rgba(63, 255, 111, 0.25);
 }
 
 .join_now_like_button:hover {
-    background-color: #9d1356;
+    background-color: #5dffab;
     transform: translateY(-2px);
+    box-shadow: 0 0 24px rgba(63, 255, 111, 0.4);
 }
 
 /* ------------------------------------------------- ( Carousel ) --------------------------------------------------------- */
@@ -690,8 +749,8 @@ box-shadow: 0 0 0px rgba(255, 255, 255, 0);
     display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
 }
 
-.got_questions_container > h3 { color:#FFD700; letter-spacing:4.2px;}
-.got_questions_container > h2 { color:#FFFFFF;  font-size:36px; }
+.got_questions_container > h2 { color:#FFD700; letter-spacing:4.2px; font-size:1.17em; }
+.got_questions_container > h3 { color:#FFFFFF; font-size:36px; }
 
 .faq {
     max-width:1100pxpx;  padding:20px;
